@@ -4,6 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 body {
+  font-family: 'Montserrat', sans-serif;
     cursor: url('/cursor_white.svg') 12 12, auto;
 }
 

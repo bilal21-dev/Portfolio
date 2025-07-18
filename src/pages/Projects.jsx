@@ -1,6 +1,8 @@
 import Bottom from "../components/Home/Bottom";
 import Top from "../components/Home/Top";
+import ResumeButton from "../components/ResumeButton";
 import ProjectCard from "../components/ProjectCard";
+import { motion } from "framer-motion";
 
 const projects = [
     {
@@ -52,14 +54,104 @@ const projects = [
 ];
 
 export default function Projects() {
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                duration: 0.8,
+                staggerChildren: 0.3,
+            },
+        },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.8,
+                ease: "easeOut",
+            },
+        },
+    };
+
     return (
-        <section className="w-full h-auto bg-black flex flex-col items-center overflow-x-hidden">
+        <motion.section 
+            className="w-screen min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex flex-col justify-center items-center relative overflow-hidden"
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+        >
+            {/* Animated Background Elements */}
+            <div className="absolute inset-0 overflow-hidden">
+                {/* Floating Orbs */}
+                <motion.div
+                    className="absolute top-20 left-2 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"
+                    animate={{
+                        x: [0, 50, 0],
+                        y: [0, -25, 0],
+                        scale: [1, 1.2, 1],
+                    }}
+                    transition={{
+                        duration: 8,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                    }}
+                />
+                <motion.div
+                    className="absolute bottom-20 right-2 sm:right-10 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-r from-pink-500/20 to-violet-500/20 rounded-full blur-3xl"
+                    animate={{
+                        x: [0, -40, 0],
+                        y: [0, 30, 0],
+                        scale: [1, 0.8, 1],
+                    }}
+                    transition={{
+                        duration: 10,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                    }}
+                />
+                
+                {/* Grid Pattern */}
+                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDM0di00aC0ydjRoLTR2Mmg0djRoMnYtNGg0di0yaC00em0wLTMwVjBoLTJ2NGgtNHYyaDR2NGgyVjZoNFY0aC00ek02IDM0di00SDR2NGgwdjJoNHY0aDJ2LTRoNHYtMkg2ek02IDRWMEg0djRIMHYyaDR2NGgyVjZoNFY0SDZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
+            </div>
+
+            {/* Main Content */}
+            <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 mt-4 sm:mt-8 lg:mt-12 pt-20 sm:pt-0">
+                {/* Page Title */}
+                <motion.div 
+                    className="text-center mb-8 sm:mb-12 lg:mb-16"
+                    variants={itemVariants}
+                >
+                    <motion.h1 
+                        className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent mb-4"
+                        whileHover={{ scale: 1.02 }}
+                        transition={{ duration: 0.2 }}
+                    >
+                        My Projects
+                    </motion.h1>
+                    
+                    <p className="text-white/70 text-lg sm:text-xl max-w-2xl mx-auto">
+                        A showcase of my development work and technical achievements
+                    </p>
+                </motion.div>
+
+                {/* Projects Section */}
+                <motion.div variants={itemVariants}>
+                    <ProjectCard projects={projects} />
+                </motion.div>
+            </div>
+
+            {/* Resume Button - Top Right */}
+            <ResumeButton />
+
+            {/* Top Navbar */}
             <Top />
 
-            {/* Pass the projects array as a prop */}
-            <ProjectCard projects={projects} />
-
+            {/* Bottom Navbar */}
             <Bottom />
-        </section>
+        </motion.section>
     );
 }
