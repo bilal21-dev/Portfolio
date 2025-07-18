@@ -110,7 +110,7 @@ export default function Skills() {
                     <motion.div
                         className="absolute z-10 w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center"
                         whileHover={{ scale: 1.1, rotate: 360 }}
-                        transition={{ duration: 0.5 }}
+                        transition={{ duration: 0.6 }}
                     >
                         <Globe className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                     </motion.div>
