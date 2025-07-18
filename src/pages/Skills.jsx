@@ -1,6 +1,7 @@
 import React from "react";
 import Bottom from "../components/Home/Bottom";
 import Top from "../components/Home/Top";
+import ResumeButton from "../components/ResumeButton";
 import { OrbitingCircles } from "../components/magicui/OrbitingCircles";
 import { motion } from "framer-motion";
 import { Code, Sparkles, Zap, Globe } from "lucide-react";
@@ -221,6 +222,9 @@ export default function Skills() {
 
             {/* Top Navbar */}
             <Top />
+
+            {/* Resume Button */}
+            <ResumeButton />
 
             {/* Bottom Navbar */}
             <Bottom />
