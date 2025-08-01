@@ -15,13 +15,13 @@ export default function ProfilePicture() {
 
     return (
         <motion.div 
-            className="fixed top-6 left-6 z-50"
+            className="fixed top-4 left-4 sm:top-6 sm:left-6 z-50"
             variants={itemVariants}
             initial="hidden"
             animate="visible"
         >
             <motion.div
-                className="relative h-14 w-14 group"
+                className="relative h-12 w-12 sm:h-14 sm:w-14 group"
                 whileHover={{ scale: 1.25 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}

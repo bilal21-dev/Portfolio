@@ -16,15 +16,15 @@ export default function ResumeButton() {
 
     return (
         <motion.div
-            className="fixed top-6 right-6 z-50"
+            className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50"
             variants={itemVariants}
             initial="hidden"
             animate="visible"
         >
             <motion.a 
-                href="https://1drv.ms/b/c/164588017e55b3d9/EfWHdivgYERHu0jhYODkJRcBOyClkKk9GJjoOmG5avIvnw?e=SUpy6e" 
+                href="https://1drv.ms/b/c/164588017e55b3d9/EWmf0DdkSi9Aku_RJMJIR8QBOMUdFcS8j5xniioRvKoZtw?e=JczMHy" 
                 target="_blank" 
-                className="relative group flex items-center gap-2 px-3 py-2 backdrop-blur-xl bg-white/10 border border-white/20 text-white rounded-2xl hover:bg-white/20 transition-all duration-300 overflow-hidden"
+                className="relative group flex items-center gap-1.5 sm:gap-2 px-2 py-1.5 sm:px-3 sm:py-2 backdrop-blur-xl bg-white/10 border border-white/20 text-white rounded-2xl hover:bg-white/20 transition-all duration-300 overflow-hidden"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
             >
@@ -51,11 +51,11 @@ export default function ResumeButton() {
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <Download size={16} className="text-white/80 group-hover:text-white transition-colors duration-300" />
+                    <Download size={14} className="sm:w-4 sm:h-4 text-white/80 group-hover:text-white transition-colors duration-300" />
                 </motion.div>
                 
                 {/* Text */}
-                <span className="relative z-10 font-medium text-xs md:text-sm">
+                <span className="relative z-10 font-medium text-xs sm:text-sm">
                     Resume
                 </span>
                 
