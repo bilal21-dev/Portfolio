@@ -101,7 +101,6 @@ export default function ProjectCard({ projects }) {
 
                                     {/* Action Links */}
                                     <div className="flex items-center gap-4 sm:gap-6">
-                                        <Tooltip title="Live Demo">
                                             <motion.a 
                                                 href={project.links.live} 
                                                 target="_blank" 
@@ -113,9 +112,7 @@ export default function ProjectCard({ projects }) {
                                                 <Eye className="w-4 h-4 sm:w-5 sm:h-5" />
                                                 <span className="text-sm sm:text-base font-medium">Demo</span>
                                             </motion.a>
-                                        </Tooltip>
                                         
-                                        <Tooltip title="Source Code">
                                             <motion.a 
                                                 href={project.links.github} 
                                                 target="_blank" 
@@ -127,7 +124,7 @@ export default function ProjectCard({ projects }) {
                                                 <Github className="w-4 h-4 sm:w-5 sm:h-5" />
                                                 <span className="text-sm sm:text-base font-medium">Code</span>
                                             </motion.a>
-                                        </Tooltip>
+                                        
                                     
                                     </div>
                                 </div>

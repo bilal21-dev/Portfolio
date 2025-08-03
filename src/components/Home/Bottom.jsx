@@ -18,7 +18,7 @@ export default function Bottom() {
     {
       Icon: FolderOpen,
       title: "Projects",
-      // link: "/projects",
+      link: "/projects",
       color: "from-purple-500 to-pink-500",
     },
     {
