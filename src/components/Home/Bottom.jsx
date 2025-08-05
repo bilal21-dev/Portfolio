@@ -3,6 +3,7 @@ import {
   FolderOpen,
   Palette,
   Briefcase,
+  User,
   Github,
   Linkedin,
   Instagram,
@@ -33,6 +34,12 @@ export default function Bottom() {
       link: "/experience",
       color: "from-orange-500 to-red-500",
     },
+    {
+      Icon: User,
+      title: "Profile",
+      link: "/profile",
+      color: "from-indigo-500 to-purple-500",
+    }
   ];
 
   const socialIcons = [

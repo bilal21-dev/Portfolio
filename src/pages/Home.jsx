@@ -384,7 +384,7 @@ export default function Home() {
             </div>
 
             {/* Profile Picture - Top Left (Home page only) */}
-            <ProfilePicture />
+            {/* <ProfilePicture /> */}
 
             {/* Resume Button - Top Right (All pages) */}
             <ResumeButton />

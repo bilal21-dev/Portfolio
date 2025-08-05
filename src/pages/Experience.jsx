@@ -343,7 +343,7 @@ export default function Experience() {
             </div>
 
             {/* Main Content */}
-            <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 mt-4 sm:mt-8 lg:mt-12 pt-20 sm:pt-0 pb-32">
+            <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 mt-4 sm:mt-8 lg:mt-12 pt-20 sm:pt-0 pb-40 lg:pb-40">
                 {/* Page Title */}
                 <motion.div className="text-center mb-8 sm:mb-12 lg:mb-16" variants={itemVariants}>
                     <motion.h1 
