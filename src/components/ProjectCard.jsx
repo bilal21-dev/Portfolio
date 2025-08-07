@@ -28,7 +28,7 @@ export default function ProjectCard({ projects }) {
 
     return (
         <motion.main 
-            className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-[10vh] mb-20"
+            className="w-full max-w-7xl mx-auto sm:px-6 lg:px-8 mt-[10vh] mb-20"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
