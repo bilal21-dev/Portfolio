@@ -103,7 +103,7 @@ export default function Profile() {
             </div>
 
             {/* Main Content */}
-            <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 pb-40 lg:px-8 py-8 sm:py-12 lg:py-16  sm:pb-32 lg:pb-36">
+            <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 pb-40 lg:px-8 py-8 sm:py-12 lg:py-16  sm:pb-32 mt-8 lg:pb-36">
                 {/* Page Title */}
                 <motion.div
                     className="text-center mb-8 sm:mb-12 lg:mb-16"
@@ -274,7 +274,7 @@ export default function Profile() {
             <Top />
 
             {/* Profile Picture - Top Left */}
-            {/* <ProfilePicture /> */}
+            {/* <ProfilePicture />e */}
 
             {/* Resume Button */}
             <ResumeButton />
