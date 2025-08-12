@@ -51,7 +51,7 @@ export default function Home() {
 
     return (
         <motion.section
-            className="w-screen min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex flex-col justify-center items-center relative overflow-hidden"
+            className="w-screen min-h-screen bg-gradient-to-br from-black via-gray-900 to-slate-900 flex flex-col justify-center items-center relative overflow-hidden"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
@@ -60,7 +60,7 @@ export default function Home() {
             <div className="absolute inset-0 overflow-hidden">
                 {/* Floating Orbs */}
                 <motion.div
-                    className="absolute top-20 left-2 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"
+                    className="absolute top-20 left-2 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-gradient-to-r from-gray-500/15 to-slate-600/15 rounded-full blur-3xl"
                     animate={{
                         x: [0, 50, 0],
                         y: [0, -25, 0],
@@ -73,7 +73,7 @@ export default function Home() {
                     }}
                 />
                 <motion.div
-                    className="absolute bottom-20 right-2 sm:right-10 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-r from-pink-500/20 to-violet-500/20 rounded-full blur-3xl"
+                    className="absolute bottom-20 right-2 sm:right-10 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-r from-slate-600/15 to-gray-700/15 rounded-full blur-3xl"
                     animate={{
                         x: [0, -40, 0],
                         y: [0, 30, 0],
@@ -89,7 +89,7 @@ export default function Home() {
                 {/* Abstract Art Elements */}
                 {/* Flowing Lines */}
                 <motion.div
-                    className="absolute top-1/4 left-1/4 w-96 h-2 bg-gradient-to-r from-cyan-400/30 to-transparent"
+                    className="absolute top-1/4 left-1/4 w-96 h-2 bg-gradient-to-r from-slate-400/25 to-transparent"
                     style={{ transformOrigin: "left center" }}
                     animate={{
                         rotate: [0, 15, -10, 5, 0],
@@ -104,7 +104,7 @@ export default function Home() {
                 />
 
                 <motion.div
-                    className="absolute bottom-1/3 right-1/4 w-80 h-3 bg-gradient-to-l from-emerald-400/40 to-transparent"
+                    className="absolute bottom-1/3 right-1/4 w-80 h-3 bg-gradient-to-l from-gray-400/30 to-transparent"
                     style={{ transformOrigin: "right center" }}
                     animate={{
                         rotate: [0, -20, 12, -8, 0],
@@ -121,7 +121,7 @@ export default function Home() {
 
                 {/* Geometric Shapes */}
                 <motion.div
-                    className="absolute top-1/2 left-1/6 w-32 h-32 border-2 border-yellow-400/20"
+                    className="absolute top-1/2 left-1/6 w-32 h-32 border-2 border-slate-400/15"
                     animate={{
                         rotate: [0, 360],
                         scale: [1, 1.3, 0.7, 1],
@@ -135,7 +135,7 @@ export default function Home() {
                 />
 
                 <motion.div
-                    className="absolute bottom-1/4 left-2/3 w-24 h-24 bg-gradient-to-br from-pink-400/20 to-purple-400/20"
+                    className="absolute bottom-1/4 left-2/3 w-24 h-24 bg-gradient-to-br from-gray-500/15 to-slate-600/15"
                     animate={{
                         rotate: [0, -180, 0],
                         scale: [1, 0.5, 1.5, 1],
@@ -188,14 +188,14 @@ export default function Home() {
                     />
                     <defs>
                         <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stopColor="#06b6d4" />
-                            <stop offset="50%" stopColor="#8b5cf6" />
-                            <stop offset="100%" stopColor="#ec4899" />
+                            <stop offset="0%" stopColor="#64748b" />
+                            <stop offset="50%" stopColor="#475569" />
+                            <stop offset="100%" stopColor="#334155" />
                         </linearGradient>
                         <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stopColor="#10b981" />
-                            <stop offset="50%" stopColor="#f59e0b" />
-                            <stop offset="100%" stopColor="#ef4444" />
+                            <stop offset="0%" stopColor="#6b7280" />
+                            <stop offset="50%" stopColor="#4b5563" />
+                            <stop offset="100%" stopColor="#374151" />
                         </linearGradient>
                     </defs>
                 </motion.svg>
@@ -205,9 +205,9 @@ export default function Home() {
                     <motion.div
                         key={i}
                         className={`absolute w-1 h-1 sm:w-2 sm:h-2 rounded-full bg-gradient-to-r ${
-                            i % 3 === 0 ? 'from-blue-400 to-cyan-400' :
-                            i % 3 === 1 ? 'from-purple-400 to-pink-400' :
-                            'from-green-400 to-yellow-400'
+                            i % 3 === 0 ? 'from-slate-400 to-gray-500' :
+                            i % 3 === 1 ? 'from-gray-400 to-slate-500' :
+                            'from-zinc-400 to-gray-600'
                         }`}
                         style={{
                             left: `${Math.random() * 100}%`,
@@ -230,7 +230,7 @@ export default function Home() {
 
                 {/* Abstract Triangular Shapes */}
                 <motion.div
-                    className="absolute top-1/3 right-1/3 w-0 h-0 border-l-[40px] border-r-[40px] border-b-[60px] border-l-transparent border-r-transparent border-b-indigo-400/30"
+                    className="absolute top-1/3 right-1/3 w-0 h-0 border-l-[40px] border-r-[40px] border-b-[60px] border-l-transparent border-r-transparent border-b-slate-500/25"
                     animate={{
                         rotate: [0, 120, 240, 360],
                         scale: [1, 1.5, 0.8, 1],
@@ -274,7 +274,7 @@ export default function Home() {
                                     key={`bilal-${index}`}
                                     className="inline-block relative text-transparent bg-clip-text text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[12rem] font-extrabold tracking-tight"
                                     style={{
-                                      backgroundImage: "linear-gradient(120deg, #10b981, #06b6d4)"
+                                      backgroundImage: "linear-gradient(120deg, #cbd5e1, #94a3b8)"
                                     }}
                                     initial={{ opacity: 0, transform: "translateY(40px)" }}
                                     animate={{ opacity: 1, transform: "translateY(0px)" }}
@@ -287,7 +287,7 @@ export default function Home() {
                                     whileHover={{
                                         scale: 1.2,
                                         rotate: 5,
-                                        filter: "drop-shadow(0 0 10px #3b82f6)", // blue glow
+                                        filter: "drop-shadow(0 0 10px #64748b)", // ghostly glow
                                     }}
                                 >
                                     {letter}
@@ -301,7 +301,7 @@ export default function Home() {
                                     key={`ahmar-${index}`}
                                     className="inline-block relative text-transparent bg-clip-text text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[12rem] font-extrabold tracking-tight"
                                     style={{
-                                      backgroundImage: "linear-gradient(120deg, #10b981, #06b6d4)"
+                                      backgroundImage: "linear-gradient(120deg, #cbd5e1, #94a3b8)"
                                     }}
                                     initial={{ opacity: 0, transform: "translateY(40px)" }}
                                     animate={{ opacity: 1, transform: "translateY(0px)" }}
@@ -314,7 +314,7 @@ export default function Home() {
                                     whileHover={{
                                         scale: 1.2,
                                         rotate: 5,
-                                        filter: "drop-shadow(0 0 10px #3b82f6)", // blue glow
+                                        filter: "drop-shadow(0 0 10px #64748b)", // ghostly glow
                                     }}
                                 >
                                     {letter}

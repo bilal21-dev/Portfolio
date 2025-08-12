@@ -102,17 +102,17 @@ export default function Bottom() {
       animate="visible"
     >
       <motion.nav
-        className="relative backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-2 sm:p-4 shadow-2xl"
+        className="relative backdrop-blur-xl bg-black/30 border border-gray-600/30 rounded-3xl p-2 sm:p-4 shadow-2xl"
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.3 }}
       >
         {/* Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5 rounded-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-700/10 via-slate-600/10 to-zinc-700/10 rounded-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-400/5 via-transparent to-gray-400/5 rounded-3xl"></div>
 
         {/* Floating Light Effect */}
         <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-3xl opacity-0"
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-400/15 to-transparent rounded-3xl opacity-0"
           animate={{
             opacity: [0, 0.3, 0],
             x: [-100, 100, -100],
@@ -192,7 +192,7 @@ export default function Bottom() {
                       rel="noopener noreferrer"
                       className="block"
                     >
-                      <div className="relative p-2 sm:p-4 rounded-2xl bg-white/10 hover:bg-white/20 transition-all duration-300 overflow-hidden">
+                      <div className="relative p-2 sm:p-4 rounded-2xl bg-gray-800/30 hover:bg-gray-700/40 transition-all duration-300 overflow-hidden">
                         <div
                           className={`absolute inset-0 bg-gradient-to-r ${color} opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl`}
                         ></div>
@@ -200,7 +200,7 @@ export default function Bottom() {
                         <Icon className="text-white/80 group-hover:text-white transition-all duration-300 relative z-10 text-[18px] sm:text-[22px]" />
 
                         <motion.div
-                          className="absolute inset-0 rounded-2xl bg-white/30"
+                          className="absolute inset-0 rounded-2xl bg-gray-400/20"
                           initial={{ scale: 0, opacity: 0 }}
                           whileHover={{ scale: 1, opacity: 0.2 }}
                           transition={{ duration: 0.3 }}
@@ -215,7 +215,7 @@ export default function Bottom() {
         </div>
 
         {/* Outer Glow */}
-        <div className="absolute -inset-2 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl blur-xl opacity-60"></div>
+        <div className="absolute -inset-2 bg-gradient-to-r from-gray-600/15 via-slate-600/15 to-zinc-600/15 rounded-3xl blur-xl opacity-60"></div>
       </motion.nav>
     </motion.div>
   );

@@ -81,7 +81,7 @@ export default function Projects() {
 
     return (
         <motion.section 
-            className="w-screen min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex flex-col justify-center items-center relative overflow-hidden"
+            className="w-screen min-h-screen bg-gradient-to-br from-black via-gray-900 to-slate-900 flex flex-col justify-center items-center relative overflow-hidden"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
@@ -90,7 +90,7 @@ export default function Projects() {
             <div className="absolute inset-0 overflow-hidden">
                 {/* Floating Orbs */}
                 <motion.div
-                    className="absolute top-20 left-2 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"
+                    className="absolute top-20 left-2 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-gradient-to-r from-gray-500/15 to-slate-600/15 rounded-full blur-3xl"
                     animate={{
                         x: [0, 50, 0],
                         y: [0, -25, 0],
@@ -103,7 +103,7 @@ export default function Projects() {
                     }}
                 />
                 <motion.div
-                    className="absolute bottom-20 right-2 sm:right-10 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-r from-pink-500/20 to-violet-500/20 rounded-full blur-3xl"
+                    className="absolute bottom-20 right-2 sm:right-10 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-r from-slate-600/15 to-gray-700/15 rounded-full blur-3xl"
                     animate={{
                         x: [0, -40, 0],
                         y: [0, 30, 0],

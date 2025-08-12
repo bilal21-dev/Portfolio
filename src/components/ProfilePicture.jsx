@@ -30,8 +30,8 @@ export default function ProfilePicture() {
                     className="relative h-full w-full rounded-full overflow-hidden cursor-pointer"
                 >
                     {/* Gradient Border */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full p-[2px]">
-                        <div className="h-full w-full bg-slate-900 rounded-full flex items-center justify-center">
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-600 via-slate-600 to-zinc-600 rounded-full p-[2px]">
+                        <div className="h-full w-full bg-black rounded-full flex items-center justify-center">
                             <img 
                                 src="/dp.png" 
                                 alt="profile pic" 
@@ -41,7 +41,7 @@ export default function ProfilePicture() {
                     </div>
                     
                     {/* Glow Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-150"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-600/15 via-slate-600/15 to-zinc-600/15 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-150"></div>
                 </motion.div>
             </motion.div>
         </motion.div>

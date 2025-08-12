@@ -144,12 +144,12 @@ export default function ProjectCard({ projects }) {
                                     </motion.div>
                                     
                                     {/* Gradient Overlay */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-slate-900/20 rounded-r-3xl"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/30 rounded-r-3xl"></div>
                                 </div>
                             </div>
 
                             {/* Animated Border */}
-                            <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                            <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-gray-600/15 via-slate-600/15 to-zinc-600/15 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                         </motion.div>
                     </motion.div>
                 ))}
