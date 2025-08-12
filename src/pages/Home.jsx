@@ -6,6 +6,7 @@ import ResumeButton from "../components/ResumeButton";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { ChevronDown, Sparkles, Code, Zap } from "lucide-react";
+import TrueFocus from '../components/TrueFocus';
 
 export default function Home() {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -204,11 +205,10 @@ export default function Home() {
                 {[...Array(15)].map((_, i) => (
                     <motion.div
                         key={i}
-                        className={`absolute w-1 h-1 sm:w-2 sm:h-2 rounded-full bg-gradient-to-r ${
-                            i % 3 === 0 ? 'from-slate-400 to-gray-500' :
-                            i % 3 === 1 ? 'from-gray-400 to-slate-500' :
-                            'from-zinc-400 to-gray-600'
-                        }`}
+                        className={`absolute w-1 h-1 sm:w-2 sm:h-2 rounded-full bg-gradient-to-r ${i % 3 === 0 ? 'from-slate-400 to-gray-500' :
+                                i % 3 === 1 ? 'from-gray-400 to-slate-500' :
+                                    'from-zinc-400 to-gray-600'
+                            }`}
                         style={{
                             left: `${Math.random() * 100}%`,
                             top: `${Math.random() * 100}%`,
@@ -274,7 +274,7 @@ export default function Home() {
                                     key={`bilal-${index}`}
                                     className="inline-block relative text-transparent bg-clip-text text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[12rem] font-extrabold tracking-tight"
                                     style={{
-                                      backgroundImage: "linear-gradient(120deg, #cbd5e1, #94a3b8)"
+                                        backgroundImage: "linear-gradient(120deg, #cbd5e1, #94a3b8)"
                                     }}
                                     initial={{ opacity: 0, transform: "translateY(40px)" }}
                                     animate={{ opacity: 1, transform: "translateY(0px)" }}
@@ -301,7 +301,7 @@ export default function Home() {
                                     key={`ahmar-${index}`}
                                     className="inline-block relative text-transparent bg-clip-text text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[12rem] font-extrabold tracking-tight"
                                     style={{
-                                      backgroundImage: "linear-gradient(120deg, #cbd5e1, #94a3b8)"
+                                        backgroundImage: "linear-gradient(120deg, #cbd5e1, #94a3b8)"
                                     }}
                                     initial={{ opacity: 0, transform: "translateY(40px)" }}
                                     animate={{ opacity: 1, transform: "translateY(0px)" }}
@@ -327,12 +327,20 @@ export default function Home() {
                             className="space-y-4"
                             variants={itemVariants}
                         >
-                            <p className="text-white/90 font-light text-base sm:text-lg md:text-xl leading-relaxed">
+                            {/* <p className="text-white/90 font-light text-base sm:text-lg md:text-xl leading-relaxed">
                                 Computer Scientist | Full Stack Web Developer
-                            </p>
+                            </p> */}
+                            <TrueFocus
+                                sentence="Computer Scientist | Full Stack Developer"
+                                manualMode={false}
+                                blurAmount={5}
+                                borderColor="red"
+                                animationDuration={2}
+                                pauseBetweenAnimations={1}
+                            />
                         </motion.div>
                         <motion.div
-                            className="inline-flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/80 text-xs sm:text-sm font-medium mb-4 sm:mb-6 self-center lg:self-start mt-2"
+                            className="inline-flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/80 text-xs sm:text-sm font-medium mb-4 sm:mb-6 self-center lg:self-start mt-3"
                             variants={itemVariants}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
@@ -377,7 +385,7 @@ export default function Home() {
                         <div className="absolute top-5 right-5 sm:top-10 sm:right-10 w-3 h-3 sm:w-4 sm:h-4 bg-yellow-400 rounded-full animate-pulse"></div>
                         <div className="absolute bottom-10 left-5 sm:bottom-20 sm:left-10 w-2 h-2 sm:w-3 sm:h-3 bg-pink-400 rounded-full animate-pulse delay-1000"></div>
                         <div className="absolute top-1/2 left-2 sm:left-5 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-400 rounded-full animate-pulse delay-500"></div>
-                        
+
                         <div className="absolute bottom-0 right-0 w-20 h-8 sm:w-40 sm:h-16 bg-gradient-to-l from-slate-900 to-transparent"></div>
                     </div>
                 </motion.div>

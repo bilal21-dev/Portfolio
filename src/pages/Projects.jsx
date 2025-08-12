@@ -13,7 +13,7 @@ const projects = [
             { name: "Node", logo: "https://nodejs.org/static/logos/jsIconGreen.svg" },
             { name: "Express", logo: "https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png" },
             { name: "MongoDB", logo: "/mongoDB.svg" },
-            { name: "Express", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyycnVTESq2qM_O2pdI704_NC1YwQz_fK27w_aU2X2ZEQEeZaVn0sNYyqSf0hWJnYr-c0&usqp=CAU" },
+            { name: "ANTD", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyycnVTESq2qM_O2pdI704_NC1YwQz_fK27w_aU2X2ZEQEeZaVn0sNYyqSf0hWJnYr-c0&usqp=CAU" },
         ],
         media: "/travel.png",
         links: {
@@ -30,9 +30,25 @@ const projects = [
             { name: "Node", logo: "https://nodejs.org/static/logos/jsIconGreen.svg" },
             { name: "Express", logo: "https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png" },
             { name: "MongoDB", logo: "/mongoDB.svg" },
-            { name: "Express", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyycnVTESq2qM_O2pdI704_NC1YwQz_fK27w_aU2X2ZEQEeZaVn0sNYyqSf0hWJnYr-c0&usqp=CAU" },
+            { name: "ANTD", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyycnVTESq2qM_O2pdI704_NC1YwQz_fK27w_aU2X2ZEQEeZaVn0sNYyqSf0hWJnYr-c0&usqp=CAU" },
         ],
         media: "/blogs.png",
+        links: {
+            // live: "https://stockar.vercel.app/",
+            // github: "https://github.com/Rehman-codes/WE-Project",
+            files: "https://drive.google.com/drive/folders/1CS6Z9iIowdxEaxpaQwBruHZrjednIJMg?usp=sharing",
+        },
+    },
+    {
+        title: "ELITE MODELING HUB",
+        description: "A platform that connects aspiring and professional models with brands, photographers, and event organizers. Whether applying to showcase talent or hiring the perfect model for a project, the process is seamless. A diverse network ensures quality, creativity, and the right fit for every assignment.",
+        tech: [
+             { name: "React", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
+            { name: "Node", logo: "https://nodejs.org/static/logos/jsIconGreen.svg" },
+            { name: "Express", logo: "https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png" },
+            { name: "ANTD", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyycnVTESq2qM_O2pdI704_NC1YwQz_fK27w_aU2X2ZEQEeZaVn0sNYyqSf0hWJnYr-c0&usqp=CAU" },
+        ],
+        media: "/Elite.png",
         links: {
             // live: "https://stockar.vercel.app/",
             // github: "https://github.com/Rehman-codes/WE-Project",
