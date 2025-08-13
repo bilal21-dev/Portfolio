@@ -5,6 +5,23 @@ import ProjectCard from "../components/ProjectCard";
 import { motion } from "framer-motion";
 
 const projects = [
+       {
+        title: "BLOGVERSE",
+        description: "Built a full stack blogging platform where users can write, like and share blogs on various topics. The platform includes Like and Share feature, worldwide news integration, profile management and secure authentication.",
+        tech: [
+             { name: "React", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
+            { name: "Node", logo: "https://nodejs.org/static/logos/jsIconGreen.svg" },
+            { name: "Express", logo: "https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png" },
+            { name: "MongoDB", logo: "/mongoDB.svg" },
+            { name: "ANTD", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyycnVTESq2qM_O2pdI704_NC1YwQz_fK27w_aU2X2ZEQEeZaVn0sNYyqSf0hWJnYr-c0&usqp=CAU" },
+        ],
+        media: "/blogs.png",
+        links: {
+            live: "https://blogverse-frontend-00n6.onrender.com",
+            // github: "https://github.com/Rehman-codes/WE-Project",
+            files: "https://drive.google.com/drive/folders/1CS6Z9iIowdxEaxpaQwBruHZrjednIJMg?usp=sharing",
+        },
+    },
     {
         title: "PAK-TRAVELS",
         description: "Built a full-stack travel planning platform with features that allow users to explore destinations, interactive map, real-time weather updates, trip search, trip creation, secure payments, OTP verification for password recovery, and trip registration.",
@@ -20,23 +37,6 @@ const projects = [
             // live: "https://gradwiz.vercel.app",
             // github: "https://github.com/Rehman-codes/GradWiz",
             files: "https://drive.google.com/drive/folders/14vIpN4kjbi8hcL9V8kzZJ0nPdOVCbpOV?usp=sharing",
-        },
-    },
-    {
-        title: "BLOGVERSE",
-        description: "Built a full stack blogging platform where users can write, like and share blogs on various topics. The platform includes Like and Share feature, worldwide news integration, profile management and secure authentication.",
-        tech: [
-             { name: "React", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
-            { name: "Node", logo: "https://nodejs.org/static/logos/jsIconGreen.svg" },
-            { name: "Express", logo: "https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png" },
-            { name: "MongoDB", logo: "/mongoDB.svg" },
-            { name: "ANTD", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyycnVTESq2qM_O2pdI704_NC1YwQz_fK27w_aU2X2ZEQEeZaVn0sNYyqSf0hWJnYr-c0&usqp=CAU" },
-        ],
-        media: "/blogs.png",
-        links: {
-            // live: "https://stockar.vercel.app/",
-            // github: "https://github.com/Rehman-codes/WE-Project",
-            files: "https://drive.google.com/drive/folders/1CS6Z9iIowdxEaxpaQwBruHZrjednIJMg?usp=sharing",
         },
     },
     {
