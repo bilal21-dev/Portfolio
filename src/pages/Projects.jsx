@@ -34,7 +34,7 @@ const projects = [
         ],
         media: "/travel.png",
         links: {
-            // live: "https://gradwiz.vercel.app",
+            live: "https://paktravels-frontend.onrender.com",
             // github: "https://github.com/Rehman-codes/GradWiz",
             files: "https://drive.google.com/drive/folders/14vIpN4kjbi8hcL9V8kzZJ0nPdOVCbpOV?usp=sharing",
         },
