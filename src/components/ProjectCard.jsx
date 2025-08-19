@@ -113,7 +113,7 @@ export default function ProjectCard({ projects }) {
                                                 <span className="text-sm sm:text-base font-medium">Demo</span>
                                             </motion.a>
                                         
-                                            <motion.a 
+                                            {/* <motion.a 
                                                 href={project.links.github} 
                                                 target="_blank" 
                                                 rel="noopener noreferrer"
@@ -123,7 +123,7 @@ export default function ProjectCard({ projects }) {
                                             >
                                                 <Github className="w-4 h-4 sm:w-5 sm:h-5" />
                                                 <span className="text-sm sm:text-base font-medium">Code</span>
-                                            </motion.a>
+                                            </motion.a> */}
                                         
                                     
                                     </div>
