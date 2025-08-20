@@ -6,7 +6,7 @@ import ResumeButton from "../components/ResumeButton";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { ChevronDown, Sparkles, Code, Zap } from "lucide-react";
-import TrueFocus from '../components/TrueFocus';
+import TextType from '../components/TextType';
 
 export default function Home() {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -206,8 +206,8 @@ export default function Home() {
                     <motion.div
                         key={i}
                         className={`absolute w-1 h-1 sm:w-2 sm:h-2 rounded-full bg-gradient-to-r ${i % 3 === 0 ? 'from-slate-400 to-gray-500' :
-                                i % 3 === 1 ? 'from-gray-400 to-slate-500' :
-                                    'from-zinc-400 to-gray-600'
+                            i % 3 === 1 ? 'from-gray-400 to-slate-500' :
+                                'from-zinc-400 to-gray-600'
                             }`}
                         style={{
                             left: `${Math.random() * 100}%`,
@@ -330,13 +330,12 @@ export default function Home() {
                             {/* <p className="text-white/90 font-light text-base sm:text-lg md:text-xl leading-relaxed">
                                 Computer Scientist | Full Stack Web Developer
                             </p> */}
-                            <TrueFocus
-                                sentence="Computer Scientist | Full Stack Developer"
-                                manualMode={false}
-                                blurAmount={5}
-                                borderColor="red"
-                                animationDuration={2}
-                                pauseBetweenAnimations={1}
+                            <TextType
+                                text={["Computer Scientist", "Full Stack Developer"]}
+                                typingSpeed={75}
+                                pauseDuration={1500}
+                                showCursor={true}
+                                cursorCharacter="|"
                             />
                         </motion.div>
                         <motion.div
