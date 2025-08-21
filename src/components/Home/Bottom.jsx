@@ -96,13 +96,13 @@ export default function Bottom() {
 
   return (
     <motion.div
-      className="flex justify-center items-center fixed bottom-6 left-0 w-full z-50"
+      className="flex justify-center items-center fixed bottom-6 left-0 w-full z-50 px-4 sm:px-0"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
       <motion.nav
-        className="relative backdrop-blur-xl bg-black/30 border border-gray-600/30 rounded-3xl p-2 sm:p-4 shadow-2xl"
+        className="relative backdrop-blur-xl bg-black/30 border border-gray-600/30 rounded-3xl p-2 sm:p-4 shadow-2xl max-w-[95%] sm:max-w-none"
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.3 }}
       >
