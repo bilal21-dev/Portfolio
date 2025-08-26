@@ -363,7 +363,7 @@ export default function Home() {
                                 transform:
                                     typeof window !== 'undefined' && window.innerWidth < 640
                                         ? 'scale(1.45) translateY(12%) translateX(15%)'
-                                        : 'scale(1.29) translateY(8%)',
+                                        : 'scale(1.40) translateY(2%)',
                                 transition: 'transform 0.3s',
                             }}
                         >
