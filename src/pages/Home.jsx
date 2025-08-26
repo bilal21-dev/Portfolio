@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { ChevronDown, Sparkles, Code, Zap } from "lucide-react";
 import TextType from '../components/TextType';
+import SharedLimelightNav from '../components/SharedLimelightNav';
 
 export default function Home() {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -399,8 +400,11 @@ export default function Home() {
             {/* Top Navbar */}
             <Top />
 
-            {/* Bottom Navbar */}
-            <Bottom />
+            {/* Shared Limelight Navigation */}
+            <SharedLimelightNav />
+
+            {/* Bottom Navbar - kept for future use */}
+            {/* <Bottom /> */}
 
         </motion.section>
     );

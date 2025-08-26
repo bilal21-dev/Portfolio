@@ -2,6 +2,7 @@ import React from "react";
 import Bottom from "../components/Home/Bottom";
 import Top from "../components/Home/Top";
 import ResumeButton from "../components/ResumeButton";
+import SharedLimelightNav from "../components/SharedLimelightNav";
 import { OrbitingCircles } from "../components/magicui/OrbitingCircles";
 import { motion } from "framer-motion";
 import { Code, Sparkles, Zap, Globe } from "lucide-react";
@@ -234,8 +235,11 @@ export default function Skills() {
             {/* Resume Button */}
             <ResumeButton />
 
-            {/* Bottom Navbar */}
-            <Bottom />
+            {/* Shared Limelight Navigation */}
+            <SharedLimelightNav />
+            
+            {/* Bottom Navbar - kept for future use */}
+            {/* <Bottom /> */}
         </motion.section>
     );
 }

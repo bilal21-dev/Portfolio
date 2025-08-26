@@ -2,6 +2,7 @@ import Bottom from "../components/Home/Bottom";
 import Top from "../components/Home/Top";
 import ResumeButton from "../components/ResumeButton";
 import ProjectCard from "../components/ProjectCard";
+import SharedLimelightNav from "../components/SharedLimelightNav";
 import { motion } from "framer-motion";
 
 const projects = [
@@ -168,8 +169,11 @@ export default function Projects() {
             {/* Top Navbar */}
             <Top />
 
-            {/* Bottom Navbar */}
-            <Bottom />
+            {/* Shared Limelight Navigation */}
+            <SharedLimelightNav />
+            
+            {/* Bottom Navbar - kept for future use */}
+            {/* <Bottom /> */}
         </motion.section>
     );
 }

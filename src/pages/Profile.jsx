@@ -3,6 +3,7 @@ import Bottom from "../components/Home/Bottom";
 import Top from "../components/Home/Top";
 import ProfilePicture from "../components/ProfilePicture";
 import ResumeButton from "../components/ResumeButton";
+import SharedLimelightNav from "../components/SharedLimelightNav";
 import { motion } from "framer-motion";
 import { GraduationCap, Calendar, MapPin, Award, BookOpen } from "lucide-react";
 
@@ -281,8 +282,11 @@ export default function Profile() {
             {/* Resume Button */}
             <ResumeButton />
 
-            {/* Bottom Navbar */}
-            <Bottom />
+            {/* Shared Limelight Navigation */}
+            <SharedLimelightNav />
+            
+            {/* Bottom Navbar - kept for future use */}
+            {/* <Bottom /> */}
         </motion.section>
     );
 }

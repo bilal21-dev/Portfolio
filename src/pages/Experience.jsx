@@ -1,6 +1,7 @@
 import Bottom from "../components/Home/Bottom";
 import Top from "../components/Home/Top";
 import ResumeButton from "../components/ResumeButton";
+import SharedLimelightNav from "../components/SharedLimelightNav";
 import { motion } from "framer-motion";
 import { Calendar, MapPin, ExternalLink, Award, Code, Users } from "lucide-react";
 
@@ -226,7 +227,12 @@ export default function Experience() {
 
             <ResumeButton />
             <Top />
-            <Bottom />
+            
+            {/* Shared Limelight Navigation */}
+            <SharedLimelightNav />
+            
+            {/* Bottom Navbar - kept for future use */}
+            {/* <Bottom /> */}
         </motion.section>
     );
 }
