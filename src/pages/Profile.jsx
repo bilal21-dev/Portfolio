@@ -85,7 +85,7 @@ export default function Profile() {
                     }}
                 />
                 <motion.div
-                    className="absolute bottom-20 right-2 sm:right-10 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-r from-slate-600/15 to-gray-700/15 rounded-full blur-3xl"
+                    className="absolute bottom-20 right-2 sm:right-10 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"
                     animate={{
                         x: [0, -40, 0],
                         y: [0, 30, 0],
@@ -134,7 +134,7 @@ export default function Profile() {
                     >
                         <div className="relative w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48">
                             {/* Gradient Border */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-gray-600 via-slate-600 to-zinc-600 rounded-full p-1">
+                            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full p-1">
                                 <div className="h-full w-full bg-black rounded-full flex items-center justify-center">
                                     <img
                                         src="/dp.png"
@@ -145,7 +145,7 @@ export default function Profile() {
                             </div>
 
                             {/* Glow Effect */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-gray-600/20 via-slate-600/20 to-zinc-600/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-110"></div>
+                            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-110"></div>
                         </div>
 
                         {/* Name and Title */}
@@ -183,14 +183,16 @@ export default function Profile() {
                             whileHover={{ y: -5 }}
                             transition={{ duration: 0.3 }}
                         >
-                            <div className="relative backdrop-blur-xl bg-gray-900/30 border border-gray-600/30 rounded-3xl p-6 sm:p-8 overflow-hidden ">
+                            <div className="relative backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-6 sm:p-8 overflow-hidden group-hover:shadow-blue-500/20">
                                 {/* Background Effects */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-gray-700/5 via-slate-600/5 to-zinc-700/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                <div className="absolute inset-0 bg-gradient-to-br from-gray-400/5 via-transparent to-gray-400/5"></div>
+                                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                
+                                {/* Enhanced Glow Effect */}
+                                <div className="absolute -inset-2 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-card-glow"></div>
 
                                 {/* Moving Light Effect */}
                                 <motion.div
-                                    className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-400/10 to-transparent opacity-0 group-hover:opacity-100"
+                                    className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-400/10 to-transparent opacity-0 group-hover:opacity-100"
                                     animate={{
                                         x: [-100, 300],
                                     }}
@@ -263,7 +265,7 @@ export default function Profile() {
                                 </div>
 
                                 {/* Outer Glow */}
-                                <div className="absolute -inset-1 bg-gradient-to-r from-gray-600/15 via-slate-600/15 to-zinc-600/15 rounded-3xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
+                                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
                             </div>
                         </motion.div>
                     ))}

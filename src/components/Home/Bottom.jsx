@@ -15,28 +15,28 @@ import { motion } from "framer-motion";
 
 export default function Bottom() {
   const navIcons = [
-    { Icon: Home, title: "Home", link: "/", color: "from-blue-500 to-cyan-500" },
+    { Icon: Home, title: "", link: "/", color: "from-blue-500 to-cyan-500" },
     {
       Icon: FolderOpen,
-      title: "Projects",
+      // title: "Projects",
       link: "/projects",
       color: "from-purple-500 to-pink-500",
     },
     {
       Icon: Palette,
-      title: "Skills",
+      title: "",
       link: "/skills",
       color: "from-green-500 to-emerald-500",
     },
     {
       Icon: Briefcase,
-      title: "Experience",
+      title: "",
       link: "/experience",
       color: "from-orange-500 to-red-500",
     },
     {
       Icon: User,
-      title: "Profile",
+      title: "",
       link: "/profile",
       color: "from-indigo-500 to-purple-500",
     }
@@ -45,25 +45,25 @@ export default function Bottom() {
   const socialIcons = [
     {
       Icon: Github,
-      title: "GitHub",
+      title: "",
       link: "https://github.com/bilal21-dev",
       color: "from-gray-600 to-gray-800",
     },
     {
       Icon: Linkedin,
-      title: "LinkedIn",
+      title: "",
       link: "https://www.linkedin.com/in/bilal-ahmar-a74815327",
       color: "from-blue-600 to-blue-800",
     },
     {
       Icon: Instagram,
-      title: "Instagram",
+      title: "",
       link: "https://www.instagram.com/bilal_ahmar21",
       color: "from-pink-500 to-rose-500",
     },
     {
       Icon: Mail,
-      title: "Email",
+      title: "",
       link: "https://mail.google.com/mail/?view=cm&to=bilalahmar245@gmail.com",
       color: "from-red-500 to-orange-500",
     },
@@ -102,13 +102,16 @@ export default function Bottom() {
       animate="visible"
     >
       <motion.nav
-        className="relative backdrop-blur-xl bg-black/30 border border-gray-600/30 rounded-3xl p-2 sm:p-4 shadow-2xl max-w-[95%] sm:max-w-none"
+        className="relative backdrop-blur-xl bg-black/30 border border-gray-600/30 rounded-3xl p-2 sm:p-4 shadow-2xl max-w-[95%] sm:max-w-none group hover:shadow-gray-500/20"
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.3 }}
       >
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-r from-gray-700/10 via-slate-600/10 to-zinc-700/10 rounded-3xl"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-gray-400/5 via-transparent to-gray-400/5 rounded-3xl"></div>
+
+        {/* Enhanced Glow Effect */}
+        <div className="absolute -inset-1 bg-gradient-to-r from-gray-500/20 via-slate-500/20 to-zinc-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-profile-card-glow"></div>
 
         {/* Floating Light Effect */}
         <motion.div
@@ -135,7 +138,10 @@ export default function Bottom() {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <NavLink to={link} className="block">
+                    {/* Individual Glow Effect for Each Nav Icon */}
+                    <div className={`absolute -inset-1 bg-gradient-to-r ${color} opacity-0 group-hover:opacity-25 transition-opacity duration-500 rounded-2xl blur-md`}></div>
+                    
+                    <NavLink to={link} className="block relative z-10">
                       <div className="relative p-2 sm:p-4 rounded-2xl bg-white/10 hover:bg-white/20 transition-all duration-300 overflow-hidden">
                         <div
                           className={`absolute inset-0 bg-gradient-to-r ${color} opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl`}
@@ -186,11 +192,14 @@ export default function Bottom() {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                   >
+                    {/* Individual Glow Effect for Each Social Icon */}
+                    <div className={`absolute -inset-1 bg-gradient-to-r ${color} opacity-0 group-hover:opacity-30 transition-opacity duration-500 rounded-2xl blur-md`}></div>
+                    
                     <a
                       href={link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block"
+                      className="block relative z-10"
                     >
                       <div className="relative p-2 sm:p-4 rounded-2xl bg-gray-800/30 hover:bg-gray-700/40 transition-all duration-300 overflow-hidden">
                         <div

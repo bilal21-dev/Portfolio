@@ -77,17 +77,7 @@ export default function Skills() {
                 <motion.div 
                     className="text-center mb-6 sm:mb-8 lg:mb-12"
                     variants={itemVariants}
-                >
-                    {/* <motion.div
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/80 text-sm font-medium mb-6"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        <Code size={16} className="text-blue-400" />
-                        Technical Skills
-                        <Sparkles size={16} className="text-yellow-400" />
-                    </motion.div> */}
-                    
+                >      
                     <motion.h1 
                         className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent mb-4"
                         whileHover={{ scale: 1.02 }}
@@ -107,49 +97,59 @@ export default function Skills() {
                     variants={itemVariants}
                 >
                     {/* Center Logo/Icon */}
-                    <motion.div
-                        className="absolute z-10 w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center"
-                        whileHover={{ scale: 1.1, rotate: 360 }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        <Globe className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                    <motion.div className="relative group">
+                        {/* Enhanced Glow Effect */}
+                        <div className="absolute -inset-4 bg-gradient-to-r from-green-500/20 via-blue-500/20 to-purple-500/20 rounded-full blur-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-700 animate-skills-card-glow"></div>
+                        
+                        <motion.div
+                            className="relative z-10 w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center group-hover:shadow-blue-500/30"
+                            whileHover={{ scale: 1.1, rotate: 360 }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            <Globe className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                        </motion.div>
                     </motion.div>
 
                     {/* Orbiting Circles Layer 1 - Core Technologies */}
                     <OrbitingCircles radius={70} duration={15}>
                         <motion.div 
-                            className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center"
+                            className="relative group w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center"
                             whileHover={{ scale: 1.2 }}
                         >
-                            <img className="h-[22px] w-[22px] sm:h-[26px] sm:w-[26px]" src="https://cdn-icons-png.flaticon.com/128/1051/1051277.png" alt="HTML" />
+                            <div className="absolute -inset-1 bg-orange-500/30 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <img className="relative z-10 h-[22px] w-[22px] sm:h-[26px] sm:w-[26px]" src="https://cdn-icons-png.flaticon.com/128/1051/1051277.png" alt="HTML" />
                         </motion.div>
                         <motion.div 
-                            className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center"
+                            className="relative group w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center"
                             whileHover={{ scale: 1.2 }}
                         >
-                            <img className="h-[22px] w-[22px] sm:h-[26px] sm:w-[26px]" src="https://cdn-icons-png.flaticon.com/128/732/732190.png" alt="CSS" />
+                            <div className="absolute -inset-1 bg-blue-500/30 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <img className="relative z-10 h-[22px] w-[22px] sm:h-[26px] sm:w-[26px]" src="https://cdn-icons-png.flaticon.com/128/732/732190.png" alt="CSS" />
                         </motion.div>
                         <motion.div 
-                            className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center"
+                            className="relative group w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center"
                             whileHover={{ scale: 1.2 }}
                         >
-                            <img className="h-[22px] w-[22px] sm:h-[26px] sm:w-[26px]" src="https://cdn-icons-png.flaticon.com/128/5968/5968292.png" alt="JavaScript" />
+                            <div className="absolute -inset-1 bg-yellow-500/30 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <img className="relative z-10 h-[22px] w-[22px] sm:h-[26px] sm:w-[26px]" src="https://cdn-icons-png.flaticon.com/128/5968/5968292.png" alt="JavaScript" />
                         </motion.div>
                     </OrbitingCircles>
 
                     {/* Orbiting Circles Layer 2 - Frameworks & Libraries */}
                     <OrbitingCircles radius={110} reverse duration={20}>
                         <motion.div 
-                            className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center"
+                            className="relative group w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center"
                             whileHover={{ scale: 1.2 }}
                         >
-                            <img className="h-[22px] w-[22px] sm:h-[24px] sm:w-[24px]" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React.js" />
+                            <div className="absolute -inset-1 bg-cyan-500/30 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <img className="relative z-10 h-[22px] w-[22px] sm:h-[24px] sm:w-[24px]" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React.js" />
                         </motion.div>
                         <motion.div 
-                            className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center"
+                            className="relative group w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center"
                             whileHover={{ scale: 1.2 }}
                         >
-                            <img className="h-[22px] w-[22px] sm:h-[24px] sm:w-[24px]" src="https://nodejs.org/static/logos/jsIconGreen.svg" alt="Node.js" />
+                            <div className="absolute -inset-1 bg-green-500/30 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <img className="relative z-10 h-[22px] w-[22px] sm:h-[24px] sm:w-[24px]" src="https://nodejs.org/static/logos/jsIconGreen.svg" alt="Node.js" />
                         </motion.div>
                         <motion.div 
                             className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center"
@@ -158,10 +158,11 @@ export default function Skills() {
                             <img className="h-[20px] w-[20px] sm:h-[22px] sm:w-[22px]" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfOeXNQhzCafkrYF4fpSjpQfzHYBiiGd1P_A&s" alt="Express.js" />
                         </motion.div>
                         <motion.div 
-                            className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center"
+                            className="relative group w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center"
                             whileHover={{ scale: 1.2 }}
                         >
-                            <img className="h-[22px] w-[22px] sm:h-[24px] sm:w-[24px]" src="./mongoDB.svg" alt="MongoDB" />
+                            <div className="absolute -inset-1 bg-green-600/30 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <img className="relative z-10 h-[22px] w-[22px] sm:h-[24px] sm:w-[24px]" src="./mongoDB.svg" alt="MongoDB" />
                         </motion.div>
                     </OrbitingCircles>
 

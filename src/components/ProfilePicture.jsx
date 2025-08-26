@@ -40,8 +40,8 @@ export default function ProfilePicture() {
                         </div>
                     </div>
                     
-                    {/* Glow Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-gray-600/15 via-slate-600/15 to-zinc-600/15 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-150"></div>
+                    {/* Enhanced Glow Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-600/20 via-slate-600/20 to-zinc-600/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 scale-150 animate-profile-card-glow"></div>
                 </motion.div>
             </motion.div>
         </motion.div>

@@ -145,8 +145,72 @@ body {
   }
 }
 
+@keyframes cardGlow {
+  0% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.15), 0 0 40px rgba(147, 51, 234, 0.1), 0 0 60px rgba(236, 72, 153, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.25), 0 0 60px rgba(147, 51, 234, 0.15), 0 0 90px rgba(236, 72, 153, 0.08);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.15), 0 0 40px rgba(147, 51, 234, 0.1), 0 0 60px rgba(236, 72, 153, 0.05);
+  }
+}
+
+@keyframes profileCardGlow {
+  0% {
+    box-shadow: 0 0 20px rgba(156, 163, 175, 0.15), 0 0 40px rgba(107, 114, 128, 0.1), 0 0 60px rgba(75, 85, 99, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(156, 163, 175, 0.25), 0 0 60px rgba(107, 114, 128, 0.15), 0 0 90px rgba(75, 85, 99, 0.08);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(156, 163, 175, 0.15), 0 0 40px rgba(107, 114, 128, 0.1), 0 0 60px rgba(75, 85, 99, 0.05);
+  }
+}
+
+@keyframes skillsCardGlow {
+  0% {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.15), 0 0 40px rgba(59, 130, 246, 0.1), 0 0 60px rgba(147, 51, 234, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(34, 197, 94, 0.25), 0 0 60px rgba(59, 130, 246, 0.15), 0 0 90px rgba(147, 51, 234, 0.08);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.15), 0 0 40px rgba(59, 130, 246, 0.1), 0 0 60px rgba(147, 51, 234, 0.05);
+  }
+}
+
+@keyframes experienceCardGlow {
+  0% {
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.15), 0 0 40px rgba(239, 68, 68, 0.1), 0 0 60px rgba(236, 72, 153, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.25), 0 0 60px rgba(239, 68, 68, 0.15), 0 0 90px rgba(236, 72, 153, 0.08);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.15), 0 0 40px rgba(239, 68, 68, 0.1), 0 0 60px rgba(236, 72, 153, 0.05);
+  }
+}
+
 .animate-glow {
   animation: glow 3s ease-in-out infinite;
+}
+
+.animate-card-glow {
+  animation: cardGlow 4s ease-in-out infinite;
+}
+
+.animate-profile-card-glow {
+  animation: profileCardGlow 4s ease-in-out infinite;
+}
+
+.animate-skills-card-glow {
+  animation: skillsCardGlow 4s ease-in-out infinite;
+}
+
+.animate-experience-card-glow {
+  animation: experienceCardGlow 4s ease-in-out infinite;
 }
 
 

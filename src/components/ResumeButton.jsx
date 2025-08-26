@@ -24,13 +24,16 @@ export default function ResumeButton() {
             <motion.a 
                 href="https://1drv.ms/b/c/164588017e55b3d9/EY_6lQuFVmBHuHXzDIVMEi8Bl5EH2jaT3Kw2Jd507fTD7w?e=eWgk7a" 
                 target="_blank" 
-                className="relative group flex items-center gap-1.5 sm:gap-2 px-2 py-1.5 sm:px-3 sm:py-2 backdrop-blur-xl bg-white/10 border border-white/20 text-white rounded-2xl hover:bg-white/20 transition-all duration-300 overflow-hidden"
+                className="relative group flex items-center gap-1.5 sm:gap-2 px-2 py-1.5 sm:px-3 sm:py-2 backdrop-blur-xl bg-white/10 border border-white/20 text-white rounded-2xl hover:bg-white/20 transition-all duration-300 overflow-hidden hover:shadow-blue-500/20"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
             >
                 {/* Background Effects */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5"></div>
+                
+                {/* Enhanced Glow Effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/25 via-purple-500/25 to-pink-500/25 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-card-glow"></div>
                 
                 {/* Moving Light Effect */}
                 <motion.div

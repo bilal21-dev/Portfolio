@@ -43,9 +43,12 @@ export default function ProjectCard({ projects }) {
                         {/* Background Effects */}
                         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         
+                        {/* Enhanced Glow Effect */}
+                        <div className="absolute -inset-2 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-card-glow"></div>
+                        
                         {/* Main Card */}
                         <motion.div
-                            className="relative backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl overflow-hidden shadow-2xl"
+                            className="relative backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-blue-500/20"
                             whileHover={{ scale: 1.02 }}
                             transition={{ duration: 0.3 }}
                         >
