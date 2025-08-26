@@ -139,6 +139,18 @@ export default function Bottom() {
                     whileTap={{ scale: 0.95 }}
                   >
                     {/* Individual Glow Effect for Each Nav Icon */}
+                    <motion.div 
+                      className={`absolute -inset-1 bg-gradient-to-r ${color} rounded-2xl blur-md`}
+                      animate={{
+                        opacity: [0.1, 0.3, 0.1],
+                      }}
+                      transition={{
+                        duration: 2 + index * 0.3, // Stagger the animation timing
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                    ></motion.div>
+                    {/* Additional hover enhancement */}
                     <div className={`absolute -inset-1 bg-gradient-to-r ${color} opacity-0 group-hover:opacity-25 transition-opacity duration-500 rounded-2xl blur-md`}></div>
                     
                     <NavLink to={link} className="block relative z-10">
@@ -193,6 +205,18 @@ export default function Bottom() {
                     whileTap={{ scale: 0.95 }}
                   >
                     {/* Individual Glow Effect for Each Social Icon */}
+                    <motion.div 
+                      className={`absolute -inset-1 bg-gradient-to-r ${color} rounded-2xl blur-md`}
+                      animate={{
+                        opacity: [0.1, 0.35, 0.1],
+                      }}
+                      transition={{
+                        duration: 2.5 + index * 0.4, // Stagger the animation timing differently from nav icons
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                    ></motion.div>
+                    {/* Additional hover enhancement */}
                     <div className={`absolute -inset-1 bg-gradient-to-r ${color} opacity-0 group-hover:opacity-30 transition-opacity duration-500 rounded-2xl blur-md`}></div>
                     
                     <a
