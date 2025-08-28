@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 import { ChevronDown, Sparkles, Code, Zap } from "lucide-react";
 import TextType from '../components/TextType';
 import SharedLimelightNav from '../components/SharedLimelightNav';
-
+import TextPressure from '../components/TextPressure';
 export default function Home() {
     const [isLoaded, setIsLoaded] = useState(false);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -53,7 +53,7 @@ export default function Home() {
 
     return (
         <motion.section
-            className="w-screen min-h-screen bg-gradient-to-br from-black via-gray-900 to-slate-900 flex flex-col justify-center items-center relative overflow-hidden"
+            className="w-screen h-screen bg-gradient-to-br from-black via-gray-900 to-slate-900 flex flex-col justify-center items-center relative overflow-hidden"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
@@ -266,62 +266,26 @@ export default function Home() {
                         {/* Main Title with Gradient */}
                         <motion.h1
                             id="name"
-                            className="text-white font-bold mb-4 mt-4 sm:mt-6 lg:mt-0 cursor-pointer group leading-tight antialiased"
+                            className="text-white font-bold mb-4 mt-12 sm:mt-6 lg:mt-0 cursor-pointer group leading-tight antialiased"
                             variants={itemVariants}
                             whileHover={{ scale: 1.02 }}
                         >
-                            {'Bilal'.split('').map((letter, index) => (
-                                <motion.span
-                                    key={`bilal-${index}`}
-                                    className="inline-block relative text-transparent bg-clip-text text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[12rem] font-extrabold tracking-tight"
-                                    style={{
-                                        backgroundImage: "linear-gradient(120deg, #cbd5e1, #94a3b8)"
-                                    }}
-                                    initial={{ opacity: 0, transform: "translateY(40px)" }}
-                                    animate={{ opacity: 1, transform: "translateY(0px)" }}
-                                    transition={{
-                                        delay: index * 0.1,
-                                        duration: 0.5,
-                                        type: "spring",
-                                        stiffness: 100,
-                                    }}
-                                    whileHover={{
-                                        scale: 1.2,
-                                        rotate: 5,
-                                        filter: "drop-shadow(0 0 10px #64748b)", // ghostly glow
-                                    }}
-                                >
-                                    {letter}
-                                </motion.span>
-                            ))}
-
-                            <br />
-
-                            {'Ahmar'.split('').map((letter, index) => (
-                                <motion.span
-                                    key={`ahmar-${index}`}
-                                    className="inline-block relative text-transparent bg-clip-text text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[12rem] font-extrabold tracking-tight"
-                                    style={{
-                                        backgroundImage: "linear-gradient(120deg, #cbd5e1, #94a3b8)"
-                                    }}
-                                    initial={{ opacity: 0, transform: "translateY(40px)" }}
-                                    animate={{ opacity: 1, transform: "translateY(0px)" }}
-                                    transition={{
-                                        delay: (index + 5) * 0.1,
-                                        duration: 0.5,
-                                        type: "spring",
-                                        stiffness: 100,
-                                    }}
-                                    whileHover={{
-                                        scale: 1.2,
-                                        rotate: 5,
-                                        filter: "drop-shadow(0 0 10px #64748b)", // ghostly glow
-                                    }}
-                                >
-                                    {letter}
-                                </motion.span>
-                            ))}
+                            <div>
+                                <TextPressure
+                                    text="Bilal Ahmar"
+                                    flex={true}
+                                    alpha={false}
+                                    stroke={false}
+                                    width={true}
+                                    weight={true}
+                                    italic={true}
+                                    textColor="#ffffff"
+                                    strokeColor="#ff0000"
+                                    minFontSize={36}
+                                />
+                            </div>
                         </motion.h1>
+                
 
                         {/* Animated Description */}
                         <motion.div
@@ -363,8 +327,8 @@ export default function Home() {
                             style={{
                                 transform:
                                     typeof window !== 'undefined' && window.innerWidth < 640
-                                        ? 'scale(1.45) translateY(12%) translateX(15%)'
-                                        : 'scale(1.40) translateY(2%)',
+                                        ? 'scale(1.45) translateY(1%) translateX(15%)'
+                                        : 'scale(1.15) translateY(2%) translateX(10%)',
                                 transition: 'transform 0.3s',
                             }}
                         >
@@ -395,13 +359,19 @@ export default function Home() {
             {/* <ProfilePicture /> */}
 
             {/* Resume Button - Top Right (All pages) */}
-            <ResumeButton />
+            <div className="absolute top-0 right-0 z-20">
+                <ResumeButton />
+            </div>
 
             {/* Top Navbar */}
-            <Top />
+            <div className="absolute top-0 left-0 w-full z-20">
+                <Top />
+            </div>
 
             {/* Shared Limelight Navigation */}
-            <SharedLimelightNav />
+            <div className="absolute bottom-0 left-0 w-full z-20">
+                <SharedLimelightNav />
+            </div>
 
             {/* Bottom Navbar - kept for future use */}
             {/* <Bottom /> */}
