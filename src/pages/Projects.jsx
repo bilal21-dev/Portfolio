@@ -51,7 +51,7 @@ const projects = [
         ],
         media: "/Elite.png",
         links: {
-            // live: "https://stockar.vercel.app/",
+            live: "http://www.elitemodellinghub.com",
             // github: "https://github.com/Rehman-codes/WE-Project",
             files: "https://drive.google.com/drive/folders/1CS6Z9iIowdxEaxpaQwBruHZrjednIJMg?usp=sharing",
         },
