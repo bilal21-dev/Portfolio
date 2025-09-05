@@ -238,8 +238,8 @@ body {
 .text-type {
   display: inline-block;
   white-space: pre-wrap;
-  font-size: 0.9rem;
-  font-weight: bold;
+  font-size: 0.8rem;
+  font-weight: semi-bold;
   text-decoration: dashed;
 }
 

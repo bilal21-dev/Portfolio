@@ -123,7 +123,7 @@ export default function Home() {
 
                 {/* Geometric Shapes */}
                 <motion.div
-                    className="absolute top-1/2 left-1/6 w-32 h-32 border-2 border-slate-400/15"
+                    className="absolute top-1/2 left-1/6 w-32 h-32 border-2 border-slate-400/25"
                     animate={{
                         rotate: [0, 360],
                         scale: [1, 1.3, 0.7, 1],
@@ -137,7 +137,7 @@ export default function Home() {
                 />
 
                 <motion.div
-                    className="absolute bottom-1/4 left-2/3 w-24 h-24 bg-gradient-to-br from-gray-500/15 to-slate-600/15"
+                    className="absolute bottom-1/4 right-2/5 w-24 h-24 bg-gradient-to-br from-gray-500/15 to-slate-600/15"
                     animate={{
                         rotate: [0, -180, 0],
                         scale: [1, 0.5, 1.5, 1],
@@ -327,8 +327,8 @@ export default function Home() {
                             style={{
                                 transform:
                                     typeof window !== 'undefined' && window.innerWidth < 640
-                                        ? 'scale(1.45) translateY(1%) translateX(15%)'
-                                        : 'scale(1.15) translateY(2%) translateX(10%)',
+                                        ? 'scale(1.45) translateY(2%) translateX(16%)'
+                                        : 'scale(1.30) translateY(3%) translateX(12%)',
                                 transition: 'transform 0.3s',
                             }}
                         >
@@ -346,9 +346,9 @@ export default function Home() {
                                 </div>
                             </div>
                         )}
-                        <div className="absolute top-5 right-5 sm:top-10 sm:right-10 w-3 h-3 sm:w-4 sm:h-4 bg-yellow-400 rounded-full animate-pulse"></div>
-                        <div className="absolute bottom-10 left-5 sm:bottom-20 sm:left-10 w-2 h-2 sm:w-3 sm:h-3 bg-pink-400 rounded-full animate-pulse delay-1000"></div>
-                        <div className="absolute top-1/2 left-2 sm:left-5 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-400 rounded-full animate-pulse delay-500"></div>
+                        <div className="absolute top-5 right-5 sm:top-20 sm:right-10 w-3 h-3 sm:w-4 sm:h-4 bg-yellow-400 rounded-full animate-pulse"></div>
+                        <div className="absolute bottom-35 left-5 sm:bottom-30 sm:left-10 w-2 h-2 sm:w-3 sm:h-3 bg-pink-400 rounded-full animate-pulse delay-1000"></div>
+                        <div className="absolute top-1/2 left-20 sm:left-20 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-400 rounded-full animate-pulse delay-500"></div>
 
                         <div className="absolute bottom-0 right-0 w-20 h-8 sm:w-40 sm:h-16 bg-gradient-to-l from-slate-900 to-transparent"></div>
                     </div>

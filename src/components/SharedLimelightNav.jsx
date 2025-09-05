@@ -32,17 +32,17 @@ export default function SharedLimelightNav() {
             type: 'route'
         },
         { 
-            id: 'projects', 
-            icon: <FolderOpen />, 
-            // label: 'Projects',
-            onClick: () => navigate('/projects'),
-            type: 'route'
-        },
-        { 
             id: 'skills', 
             icon: <Palette />, 
             // label: 'Skills',
             onClick: () => navigate('/skills'),
+            type: 'route'
+        },
+        { 
+            id: 'projects', 
+            icon: <FolderOpen />, 
+            // label: 'Projects',
+            onClick: () => navigate('/projects'),
             type: 'route'
         },
         { 
@@ -94,8 +94,8 @@ export default function SharedLimelightNav() {
     const getCurrentActiveIndex = () => {
         const routeToIndex = {
             '/': 0,
-            '/projects': 1,
-            '/skills': 2,
+            '/skills': 1,
+            '/projects': 2,
             '/experience': 3,
             '/profile': 4
         };
