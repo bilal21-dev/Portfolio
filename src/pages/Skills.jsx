@@ -79,13 +79,14 @@ export default function Skills() {
             bgColor: "bg-purple-500/10",
             borderColor: "border-purple-500/30",
             skills: [
-                { name: "Python", level: 85, icon: "https://cdn-icons-png.flaticon.com/128/5968/5968350.png" },
-                { name: "TensorFlow", level: 80, icon: "https://cdn-icons-png.flaticon.com/128/873/873107.png" },
-                { name: "PyTorch", level: 75, icon: "https://pytorch.org/assets/images/pytorch-logo.png" },
-                { name: "Scikit-learn", level: 82, icon: "https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" },
+                { name: "Python", level: 75, icon: "https://cdn-icons-png.flaticon.com/128/5968/5968350.png" },
+                { name: "Numpy", level: 75, icon: "/NumPy.png" },
+                { name: "Pandas", level: 75, icon: "https://pandas.pydata.org/static/img/pandas_mark.svg" },
+                { name: "Scikit-learn", level: 70, icon: "https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" },
+                { name: "PyTorch", level: 60, icon: "https://pytorch.org/assets/images/pytorch-logo.png" },
+                // { name: "TensorFlow", level: 80, icon: "https://cdn-icons-png.flaticon.com/128/873/873107.png" },
                 // { name: "OpenAI API", level: 88, icon: "https://cdn.openai.com/API/logo-assets/openai-logomark.svg" },
-                { name: "Hugging Face", level: 78, icon: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg" },
-                { name: "Pandas", level: 85, icon: "https://pandas.pydata.org/static/img/pandas_mark.svg" }
+                // { name: "Hugging Face", level: 78, icon: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg" },
             ]
         },
         // mobile: {
