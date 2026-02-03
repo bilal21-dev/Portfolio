@@ -8,6 +8,63 @@ import { useState } from "react";
 
 const devProjects = [
   {
+  title: "ALLDOMAINS JOB PORTAL",
+    description:
+      "Built a full-scale Job Portal Platform using React.js and Node.js, designed to handle real-world complexities.Implemented Super Admin, Admin, and Candidate roles with secure authentication and role-based access control.Features include profile management, job posting & applications, and real-time live chat support.Focused on scalable architecture, clean UI, and production-level workflows.",
+    tech: [
+      {
+        name: "React",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+      },
+      { name: "Node", logo: "https://nodejs.org/static/logos/jsIconGreen.svg" },
+      {
+        name: "Express",
+        logo: "https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png",
+      },
+      { name: "MongoDB", logo: "/mongoDB.svg" },
+      {
+        name: "ANTD",
+        logo: "/ant-design-seeklogo.png",
+      },
+      {
+        name: "Framer Motion",
+        logo: "/framer-motion.svg",
+      },
+      {
+        name: "ReduxToolkit",
+        logo: "/redux.svg",
+      },
+    ],
+    media: "/AllDomains.png",
+    links: {
+      live: "https://job-portal-frontend-eosin.vercel.app/",
+      files:
+        "https://drive.google.com/drive/folders/14vIpN4kjbi8hcL9V8kzZJ0nPdOVCbpOV?usp=sharing",
+    },
+  },
+    {
+  title: "PICKTOT",
+    description:
+      "Developed PickTot, a startup social media platform with user authentication, voting features, and an admin panel for content management. Users can create profiles, post content, and engage with others through upvotes and downvotes. The admin panel allows for efficient moderation and user management, ensuring a safe and interactive community experience.",
+    tech: [
+      {
+        name: "React",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+      },
+      { name: "NextJs", logo: "/next-js-seeklogo.png" },
+      {
+        name: "Express",
+        logo: "https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png",
+      },
+      { name: "Firebase", logo: "/firebase-seeklogo.png" },
+  
+    ],
+    media: "/PICKTOT.png",
+    links: {
+      live: "http://picktot.com",
+      },
+  },
+  {
     title: "BLOGVERSE",
     description:
       "Built a full stack blogging platform where users can write, like and share blogs on various topics. The platform includes Like and Share feature, worldwide news integration, profile management and secure authentication.",
@@ -123,9 +180,9 @@ const devProjects = [
 // Add your AI/ML projects here
 const aiProjects = [
   {
-    title: "AI PROJECT 1",
+    title: "SKETCH2SOLVE",
     description:
-      "Example AI/ML project description. Replace this with your actual AI/ML project details.",
+      "Built a Python handwritten-equation solver with TensorFlow/Keras (CNN + RNN) and a Flask web app for an interactive demo. ",
     tech: [
       {
         name: "Python",
@@ -135,41 +192,20 @@ const aiProjects = [
         name: "TensorFlow",
         logo: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg",
       },
+       {
+        name: "Keras",
+        logo: "/Keras_Logo.jpg",
+      },
       {
         name: "Jupyter",
         logo: "https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg",
       },
     ],
-    media: "/ai-project1.png",
+    media: "/HANDY.png",
     links: {
-      live: "#",
-      files: "#",
+      live: "https://handymath.streamlit.app",
     },
-  },
-  {
-    title: "AI PROJECT 2",
-    description:
-      "Example AI/ML project description. Replace this with your actual AI/ML project details.",
-    tech: [
-      {
-        name: "Python",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
-      },
-      {
-        name: "PyTorch",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg",
-      },
-      {
-        name: "Scikit-learn",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg",
-      },
-    ],
-    media: "/ai-project2.png",
-    links: {
-      live: "#",
-      files: "#",
-    },
-  },
+  }
 ];
 
 export default function Projects() {
@@ -297,7 +333,7 @@ export default function Projects() {
             </motion.button>
 
             <motion.button
-              // onClick={() => setActiveSection("ai")}
+              onClick={() => setActiveSection("ai")}
               className={`w-48 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 activeSection === "ai"
                   ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/25"
