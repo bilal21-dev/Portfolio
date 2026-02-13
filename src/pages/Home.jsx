@@ -53,7 +53,7 @@ export default function Home() {
 
     return (
         <motion.section
-            className="w-full h-screen bg-gradient-to-br from-black via-gray-900 to-slate-900 flex flex-col justify-center items-center relative overflow-x-hidden overflow-y-auto"
+            className="w-full h-screen bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-slate-900 via-gray-900 to-black flex flex-col justify-center items-center relative overflow-x-hidden overflow-y-auto"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
@@ -304,14 +304,14 @@ export default function Home() {
                             />
                         </motion.div>
                         <motion.div
-                            className="inline-flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/80 text-xs sm:text-sm font-medium mb-4 sm:mb-6 self-center lg:self-start mt-3"
+                            className="inline-flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-2.5 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-full text-white/90 text-xs sm:text-sm font-medium mb-4 sm:mb-6 self-center lg:self-start mt-4 shadow-lg shadow-black/20"
                             variants={itemVariants}
-                            whileHover={{ scale: 1.05 }}
+                            whileHover={{ scale: 1.05, borderColor: 'rgba(167, 139, 250, 0.5)' }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            <Sparkles size={14} className="text-yellow-400" />
-                            Available for Work
-                            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                            <Sparkles size={14} className="text-violet-400" />
+                            <span className="bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">Available for Work</span>
+                            <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shadow-lg shadow-emerald-400/50"></div>
                         </motion.div>
                     </div>
                 </motion.div>

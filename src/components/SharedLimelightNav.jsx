@@ -178,34 +178,34 @@ export default function SharedLimelightNav() {
                     >
                     {/* Mobile: Compact grid layout */}
                     <div className="block md:hidden">
-                        <div className="bg-gradient-to-r from-slate-800/95 via-gray-900/95 to-slate-800/95 backdrop-blur-lg border border-slate-600/30 rounded-2xl p-2.5 shadow-xl">
+                        <div className="bg-gradient-to-r from-slate-800/95 via-slate-900/95 to-slate-800/95 backdrop-blur-2xl border border-slate-600/20 rounded-2xl p-3 shadow-2xl shadow-black/40">
                             {/* Main navigation */}
-                            <div className="grid grid-cols-5 gap-2 mb-2">
+                            <div className="grid grid-cols-5 gap-2.5 mb-2.5">
                                 {navItems.slice(0, 5).map((item, index) => (
                                     <motion.button
                                         key={item.id}
                                         onClick={item.onClick}
-                                        className={`relative p-2.5 rounded-xl transition-all duration-300 flex flex-col items-center justify-center ${
+                                        className={`relative p-3 rounded-xl transition-all duration-300 flex flex-col items-center justify-center ${
                                             getCurrentActiveIndex() === index 
-                                                ? 'bg-slate-600/40 shadow-[0_0_12px_rgba(148,163,184,0.4)] border border-slate-500/30' 
-                                                : 'bg-slate-700/30 hover:bg-slate-600/40 border border-transparent'
+                                                ? 'bg-gradient-to-br from-indigo-500/30 to-violet-500/30 shadow-lg shadow-indigo-500/20 border border-indigo-400/30' 
+                                                : 'bg-slate-700/20 hover:bg-slate-600/30 border border-transparent hover:border-slate-500/20'
                                         }`}
-                                        whileHover={{ scale: 1.05, y: -1 }}
-                                        whileTap={{ scale: 0.95 }}
+                                        whileHover={{ scale: 1.08, y: -2 }}
+                                        whileTap={{ scale: 0.92 }}
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: index * 0.1 }}
+                                        transition={{ delay: index * 0.08 }}
                                     >
                                         {React.cloneElement(item.icon, {
                                             className: `w-5 h-5 ${
                                                 getCurrentActiveIndex() === index 
-                                                    ? 'text-slate-200' 
+                                                    ? 'text-indigo-200' 
                                                     : 'text-slate-400'
                                             }`
                                         })}
                                         {getCurrentActiveIndex() === index && (
                                             <motion.div
-                                                className="absolute -top-0.5 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-slate-300 rounded-full shadow-[0_0_8px_rgba(148,163,184,0.6)]"
+                                                className="absolute -top-0.5 left-1/2 transform -translate-x-1/2 w-8 h-0.5 bg-gradient-to-r from-indigo-400 to-violet-400 rounded-full shadow-lg shadow-indigo-400/50"
                                                 layoutId="mobile-indicator"
                                                 transition={{ type: "spring", stiffness: 300, damping: 25 }}
                                             />
@@ -215,23 +215,23 @@ export default function SharedLimelightNav() {
                             </div>
                             
                             {/* Divider */}
-                            <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-500/40 to-transparent mb-2"></div>
+                            <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-500/30 to-transparent mb-2.5"></div>
                             
                             {/* Social media icons */}
-                            <div className="grid grid-cols-4 gap-2">
+                            <div className="grid grid-cols-4 gap-2.5">
                                 {navItems.slice(5).map((item, index) => (
                                     <motion.button
                                         key={item.id}
                                         onClick={item.onClick}
-                                        className="relative p-2 rounded-lg bg-slate-700/30 hover:bg-slate-600/40 transition-all duration-300 flex items-center justify-center border border-transparent hover:border-slate-500/30"
-                                        whileHover={{ scale: 1.1, y: -1 }}
-                                        whileTap={{ scale: 0.95 }}
+                                        className="relative p-2.5 rounded-xl bg-slate-700/20 hover:bg-gradient-to-br hover:from-indigo-500/20 hover:to-violet-500/20 transition-all duration-300 flex items-center justify-center border border-transparent hover:border-indigo-500/20"
+                                        whileHover={{ scale: 1.12, y: -2 }}
+                                        whileTap={{ scale: 0.92 }}
                                         initial={{ opacity: 0, scale: 0.8 }}
                                         animate={{ opacity: 1, scale: 1 }}
-                                        transition={{ delay: 0.5 + index * 0.1 }}
+                                        transition={{ delay: 0.5 + index * 0.08 }}
                                     >
                                         {React.cloneElement(item.icon, {
-                                            className: "w-4 h-4 text-slate-400 hover:text-slate-300"
+                                            className: "w-4 h-4 text-slate-400 hover:text-indigo-300 transition-colors duration-300"
                                         })}
                                     </motion.button>
                                 ))}
@@ -250,10 +250,10 @@ export default function SharedLimelightNav() {
                                 items={navItems}
                                 defaultActiveIndex={getCurrentActiveIndex()}
                                 onTabChange={handleTabChange}
-                                className="bg-gradient-to-r from-slate-800/90 via-gray-900/90 to-slate-800/90 backdrop-blur-lg border-slate-600/30 shadow-xl px-2 min-w-fit"
-                                limelightClassName="bg-slate-300 shadow-[0_0_15px_rgba(148,163,184,0.8),0_0_30px_rgba(148,163,184,0.6),0_0_45px_rgba(148,163,184,0.4)]"
+                                className="bg-gradient-to-r from-slate-800/90 via-slate-900/95 to-slate-800/90 backdrop-blur-2xl border-slate-600/20 shadow-2xl shadow-black/40 px-2 min-w-fit"
+                                limelightClassName="bg-gradient-to-r from-indigo-400 to-violet-400 shadow-[0_0_20px_rgba(129,140,248,0.6),0_0_40px_rgba(139,92,246,0.4),0_0_60px_rgba(168,85,247,0.2)]"
                                 iconContainerClassName="px-2 sm:px-3"
-                                iconClassName="text-slate-400 hover:text-slate-200 w-5 h-5 sm:w-6 sm:h-6"
+                                iconClassName="text-slate-400 hover:text-indigo-200 w-5 h-5 sm:w-6 sm:h-6 transition-colors duration-300"
                             />
                         </motion.div>
                     </div>

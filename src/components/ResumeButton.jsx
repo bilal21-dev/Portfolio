@@ -24,16 +24,16 @@ export default function ResumeButton() {
             <motion.a 
                 href="https://1drv.ms/b/c/164588017e55b3d9/IQDe4gKWJXYeSITPA1krJd6KAUcrQAs59Zfckj6ta53M7b0?e=TflH7D" 
                 target="_blank" 
-                className="relative group flex items-center gap-1.5 sm:gap-2 px-2 py-1.5 sm:px-3 sm:py-2 backdrop-blur-xl bg-white/10 border border-white/20 text-white rounded-2xl hover:bg-white/20 transition-all duration-300 overflow-hidden hover:shadow-blue-500/20"
-                whileHover={{ scale: 1.05 }}
+                className="relative group flex items-center gap-2 sm:gap-2.5 px-3 py-2 sm:px-4 sm:py-2.5 backdrop-blur-2xl bg-gradient-to-r from-white/10 to-white/5 border border-white/15 text-white rounded-2xl hover:border-violet-500/40 transition-all duration-400 overflow-hidden shadow-lg shadow-black/30"
+                whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
             >
                 {/* Background Effects */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-violet-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5"></div>
                 
                 {/* Enhanced Glow Effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/25 via-purple-500/25 to-pink-500/25 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-card-glow"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500/25 via-violet-500/25 to-purple-500/25 rounded-2xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 {/* Moving Light Effect */}
                 <motion.div
@@ -51,14 +51,14 @@ export default function ResumeButton() {
                 {/* Icon */}
                 <motion.div
                     className="relative z-10"
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.5 }}
+                    whileHover={{ rotate: 180 }}
+                    transition={{ duration: 0.4 }}
                 >
-                    <Download size={14} className="sm:w-4 sm:h-4 text-white/80 group-hover:text-white transition-colors duration-300" />
+                    <Download size={15} className="sm:w-4 sm:h-4 text-violet-300 group-hover:text-white transition-colors duration-300" />
                 </motion.div>
                 
                 {/* Text */}
-                <span className="relative z-10 font-medium text-xs sm:text-sm">
+                <span className="relative z-10 font-medium text-xs sm:text-sm bg-gradient-to-r from-white to-slate-200 bg-clip-text text-transparent group-hover:from-white group-hover:to-violet-200 transition-all duration-300">
                     Resume
                 </span>
                 

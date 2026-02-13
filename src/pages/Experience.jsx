@@ -50,7 +50,7 @@ export default function Experience() {
 
     return (
         <motion.section 
-            className="w-full min-h-screen bg-gradient-to-br from-black via-gray-900 to-slate-900 flex flex-col justify-center items-center relative overflow-x-hidden overflow-y-auto"
+            className="w-full min-h-screen bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-slate-900 via-gray-900 to-black flex flex-col justify-center items-center relative overflow-x-hidden overflow-y-auto"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
@@ -89,48 +89,48 @@ export default function Experience() {
             {/* Main Content */}
             <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 mt-4 sm:mt-8 lg:mt-12 pt-20 sm:pt-0 pb-40 lg:pb-40 overflow-x-hidden">
                 {/* Page Title */}
-                <motion.div className="text-center mb-8 sm:mb-12 lg:mb-16" variants={itemVariants}>
+                <motion.div className="text-center mb-10 sm:mb-14 lg:mb-16" variants={itemVariants}>
                     <motion.h1 
-                        className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent mb-4"
+                        className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-violet-200 to-indigo-300 bg-clip-text text-transparent mb-5 tracking-tight"
                         whileHover={{ scale: 1.02 }}
                         transition={{ duration: 0.2 }}
                     >
                         Work Experience
                     </motion.h1>
-                    <p className="text-white/70 text-lg sm:text-xl max-w-2xl mx-auto">
+                    <p className="text-white/60 text-lg sm:text-xl max-w-2xl mx-auto font-light">
                         Professional journey and achievements in software development
                     </p>
                 </motion.div>
 
                 {/* Experience Cards */}
-                <div className="space-y-8 sm:space-y-12">
+                <div className="space-y-10 sm:space-y-14">
                     {experiences.map((experience, index) => (
                         <motion.div key={index} className="relative group" variants={itemVariants}>
                             {/* <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div> */}
 
-                             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-violet-500/10 to-purple-500/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
                             
                             {/* Enhanced Glow Effect */}
                             {/* <div className="absolute -inset-2 bg-gradient-to-r from-orange-500/20 via-red-500/20 to-pink-500/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-experience-card-glow"></div> */}
-                            <div className="absolute -inset-2 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-card-glow"></div>
+                            <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500/20 via-violet-500/20 to-purple-500/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 animate-card-glow"></div>
 
                             <motion.div
-                                className="relative backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-blue-500/20"
-                                whileHover={{ scale: 1.02 }}
-                                transition={{ duration: 0.3 }}
+                                className="relative backdrop-blur-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/10 rounded-3xl overflow-hidden shadow-2xl shadow-black/40 group-hover:border-white/20 group-hover:shadow-indigo-500/10 transition-all duration-500"
+                                whileHover={{ scale: 1.015, y: -4 }}
+                                transition={{ duration: 0.4, ease: "easeOut" }}
                             >
                                 <div className="flex flex-col lg:flex-row">
                                     <div className="w-full lg:w-2/3 p-6 sm:p-8 lg:p-10">
                                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
                                             <div>
                                                 <motion.h2 
-                                                    className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent mb-2"
-                                                    whileHover={{ scale: 1.05 }}
+                                                    className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white via-violet-200 to-indigo-300 bg-clip-text text-transparent mb-2 tracking-tight"
+                                                    whileHover={{ scale: 1.02 }}
                                                     transition={{ duration: 0.2 }}
                                                 >
                                                     {experience.company}
                                                 </motion.h2>
-                                                <p className="text-white/90 text-lg sm:text-xl font-semibold">
+                                                <p className="text-white/80 text-lg sm:text-xl font-medium">
                                                     {experience.position}
                                                 </p>
                                             </div>
@@ -139,8 +139,8 @@ export default function Experience() {
                                                 href={experience.link}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="inline-flex items-center gap-2 mt-4 sm:mt-0 px-4 py-2 bg-blue-500/20 hover:bg-blue-500/30 border border-blue-500/30 rounded-xl text-blue-200 hover:text-blue-100 transition-all duration-300"
-                                                whileHover={{ scale: 1.05 }}
+                                                className="inline-flex items-center gap-2 mt-4 sm:mt-0 px-5 py-2.5 bg-gradient-to-r from-indigo-500/20 to-violet-500/20 hover:from-indigo-500/30 hover:to-violet-500/30 border border-indigo-500/30 hover:border-indigo-400/50 rounded-xl text-indigo-200 hover:text-white transition-all duration-300 shadow-lg shadow-indigo-500/10"
+                                                whileHover={{ scale: 1.05, y: -2 }}
                                                 whileTap={{ scale: 0.95 }}
                                             >
                                                 <ExternalLink className="w-4 h-4" />
@@ -159,21 +159,21 @@ export default function Experience() {
                                             </div>
                                         </div>
 
-                                        <p className="text-white/80 text-sm sm:text-base lg:text-lg leading-relaxed mb-6">
+                                        <p className="text-white/70 text-sm sm:text-base lg:text-lg leading-relaxed mb-6 font-light">
                                             {experience.description}
                                         </p>
 
                                         <div className="mb-6">
-                                            <h3 className="text-white/90 text-lg font-semibold mb-3 flex items-center gap-2">
-                                                <Code className="w-5 h-5" />
+                                            <h3 className="text-white/80 text-sm font-medium mb-3 flex items-center gap-2 uppercase tracking-wide">
+                                                <Code className="w-4 h-4 text-indigo-400" />
                                                 Technologies Used
                                             </h3>
-                                            <div className="flex flex-wrap gap-2">
+                                            <div className="flex flex-wrap gap-2.5">
                                                 {experience.technologies.map((tech, techIndex) => (
                                                     <motion.span
                                                         key={techIndex}
-                                                        className="px-3 py-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/80 text-sm"
-                                                        whileHover={{ scale: 1.05 }}
+                                                        className="px-4 py-1.5 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-full text-white/80 text-sm font-medium hover:border-indigo-500/30 transition-all duration-300"
+                                                        whileHover={{ scale: 1.05, y: -1 }}
                                                     >
                                                         {tech}
                                                     </motion.span>
@@ -182,19 +182,19 @@ export default function Experience() {
                                         </div>
 
                                         <div>
-                                            <h3 className="text-white/90 text-lg font-semibold mb-3 flex items-center gap-2">
-                                                <Award className="w-5 h-5" />
+                                            <h3 className="text-white/80 text-sm font-medium mb-3 flex items-center gap-2 uppercase tracking-wide">
+                                                <Award className="w-4 h-4 text-amber-400" />
                                                 Key Achievements
                                             </h3>
-                                            <ul className="space-y-2">
+                                            <ul className="space-y-2.5">
                                                 {experience.achievements.map((achievement, achievementIndex) => (
                                                     <motion.li
                                                         key={achievementIndex}
-                                                        className="flex items-start gap-2 text-white/80 text-sm sm:text-base"
-                                                        whileHover={{ x: 5 }}
+                                                        className="flex items-start gap-3 text-white/70 text-sm sm:text-base font-light"
+                                                        whileHover={{ x: 4 }}
                                                         transition={{ duration: 0.2 }}
                                                     >
-                                                        <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                                                        <div className="w-2 h-2 bg-gradient-to-r from-indigo-400 to-violet-400 rounded-full mt-2 flex-shrink-0 shadow-sm shadow-indigo-400/50"></div>
                                                         {achievement}
                                                     </motion.li>
                                                 ))}

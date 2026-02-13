@@ -64,7 +64,7 @@ export default function Profile() {
 
     return (
         <motion.section
-            className="w-full min-h-screen bg-gradient-to-br from-black via-gray-900 to-slate-900 flex flex-col justify-center items-center relative overflow-x-hidden overflow-y-auto"
+            className="w-full min-h-screen bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-slate-900 via-gray-900 to-black flex flex-col justify-center items-center relative overflow-x-hidden overflow-y-auto"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
@@ -107,46 +107,46 @@ export default function Profile() {
             <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 pb-40 lg:px-8 py-8 sm:py-12 lg:py-16  sm:pb-32 mt-8 lg:pb-36 overflow-x-hidden">
                 {/* Page Title */}
                 <motion.div
-                    className="text-center mb-8 sm:mb-12 lg:mb-16"
+                    className="text-center mb-10 sm:mb-14 lg:mb-16"
                     variants={itemVariants}
                 >
                     <motion.h1
-                        className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent mb-4"
+                        className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-violet-200 to-indigo-300 bg-clip-text text-transparent mb-5 tracking-tight"
                         whileHover={{ scale: 1.02 }}
                         transition={{ duration: 0.2 }}
                     >
                         About Me
                     </motion.h1>
 
-                    <p className="text-white/70 text-lg sm:text-xl max-w-2xl mx-auto">
+                    <p className="text-white/60 text-lg sm:text-xl max-w-2xl mx-auto font-light">
                         Get to know more about my educational background and journey
                     </p>
                 </motion.div>
 
                 {/* Profile Picture Section */}
                 <motion.div
-                    className="flex justify-center mb-12 sm:mb-16"
+                    className="flex justify-center mb-14 sm:mb-16"
                     variants={itemVariants}
                 >
                     <motion.div
                         className="relative group"
                         whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.3 }}
+                        transition={{ duration: 0.4, ease: "easeOut" }}
                     >
-                        <div className="relative w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48">
+                        <div className="relative w-36 h-36 sm:w-44 sm:h-44 lg:w-52 lg:h-52">
                             {/* Gradient Border */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full p-1">
+                            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-500 rounded-full p-1 shadow-2xl shadow-violet-500/30">
                                 <div className="h-full w-full bg-black rounded-full flex items-center justify-center">
                                     <img
                                         src="/dp.png"
                                         alt="Bilal Ahmar"
-                                        className="h-full w-full object-cover rounded-full transition-transform duration-300 group-hover:scale-105"
+                                        className="h-full w-full object-cover rounded-full transition-transform duration-400 group-hover:scale-105"
                                     />
                                 </div>
                             </div>
 
                             {/* Glow Effect */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-110"></div>
+                            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/30 via-violet-500/30 to-purple-500/30 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 scale-125"></div>
                         </div>
 
                         {/* Name and Title */}
@@ -181,15 +181,15 @@ export default function Profile() {
                             key={index}
                             className="relative group"
                             variants={itemVariants}
-                            whileHover={{ y: -5 }}
-                            transition={{ duration: 0.3 }}
+                            whileHover={{ y: -6 }}
+                            transition={{ duration: 0.4, ease: "easeOut" }}
                         >
-                            <div className="relative backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-6 sm:p-8 overflow-hidden group-hover:shadow-blue-500/20">
+                            <div className="relative backdrop-blur-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/10 rounded-3xl p-6 sm:p-8 overflow-hidden group-hover:border-white/20 group-hover:shadow-indigo-500/10 transition-all duration-500 shadow-2xl shadow-black/40">
                                 {/* Background Effects */}
-                                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-violet-500/10 to-purple-500/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
                                 
                                 {/* Enhanced Glow Effect */}
-                                <div className="absolute -inset-2 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-card-glow"></div>
+                                <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500/20 via-violet-500/20 to-purple-500/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 animate-card-glow"></div>
 
                                 {/* Moving Light Effect */}
                                 <motion.div
@@ -210,53 +210,53 @@ export default function Profile() {
                                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
                                         <div className="flex items-center gap-4 mb-4 sm:mb-0">
                                             <motion.div
-                                                className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-xl border border-white/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+                                                className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-indigo-500/20 to-violet-500/20 backdrop-blur-xl border border-white/10 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:border-indigo-500/30 transition-all duration-400 shadow-lg shadow-black/20"
                                             >
-                                                <GraduationCap className="w-8 h-8 sm:w-10 sm:h-10 text-blue-400" />
+                                                <GraduationCap className="w-8 h-8 sm:w-10 sm:h-10 text-indigo-400" />
                                             </motion.div>
 
                                             <div className="flex-1">
-                                                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 group-hover:text-blue-100 transition-colors duration-300">
+                                                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 group-hover:text-indigo-100 transition-colors duration-300 tracking-tight">
                                                     {edu.degree}
                                                 </h3>
-                                                <p className="text-white/80 text-lg font-medium mb-1">
+                                                <p className="text-white/70 text-base sm:text-lg font-medium">
                                                     {edu.institution}
                                                 </p>
                                             </div>
                                         </div>
 
                                         <div className="flex flex-col sm:text-right space-y-2">
-                                            <div className="flex items-center gap-2 text-white/70">
-                                                <Calendar size={16} />
-                                                <span className="text-sm">{edu.duration}</span>
+                                            <div className="flex items-center gap-2 text-white/60">
+                                                <Calendar size={15} className="text-indigo-400/70" />
+                                                <span className="text-sm font-medium">{edu.duration}</span>
                                             </div>
-                                            <div className="flex items-center gap-2 text-white/70">
-                                                <MapPin size={16} />
+                                            <div className="flex items-center gap-2 text-white/60">
+                                                <MapPin size={15} className="text-indigo-400/70" />
                                                 <span className="text-sm">{edu.location}</span>
                                             </div>
                                         </div>
                                     </div>
 
                                     {/* Description */}
-                                    <p className="text-white/80 leading-relaxed mb-6 text-sm sm:text-base">
+                                    <p className="text-white/70 leading-relaxed mb-6 text-sm sm:text-base font-light">
                                         {edu.description}
                                     </p>
 
                                     {/* Achievements */}
                                     <div className="space-y-3">
-                                        <h4 className="text-white font-semibold flex items-center gap-2">
-                                            <Award size={18} className="text-yellow-400" />
+                                        <h4 className="text-white/80 font-medium flex items-center gap-2 uppercase tracking-wide text-sm">
+                                            <Award size={16} className="text-amber-400" />
                                             Key Highlights
                                         </h4>
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                             {edu.achievements.map((achievement, i) => (
                                                 <motion.div
                                                     key={i}
-                                                    className="flex items-start gap-3 p-3 bg-gray-800/20 backdrop-blur-sm border border-gray-600/20 rounded-xl hover:bg-gray-700/30 transition-colors duration-300"
-                                                    whileHover={{ scale: 1.02 }}
+                                                    className="flex items-start gap-3 p-3.5 bg-gradient-to-br from-slate-800/30 to-slate-900/30 backdrop-blur-sm border border-white/5 rounded-xl hover:bg-slate-700/30 hover:border-indigo-500/20 transition-all duration-300"
+                                                    whileHover={{ scale: 1.02, y: -2 }}
                                                 >
-                                                    <BookOpen size={16} className="text-green-400 mt-0.5 flex-shrink-0" />
-                                                    <span className="text-white/80 text-sm">
+                                                    <BookOpen size={15} className="text-emerald-400 mt-0.5 flex-shrink-0" />
+                                                    <span className="text-white/70 text-sm font-light">
                                                         {achievement}
                                                     </span>
                                                 </motion.div>
@@ -266,7 +266,7 @@ export default function Profile() {
                                 </div>
 
                                 {/* Outer Glow */}
-                                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
+                                <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500/15 via-violet-500/15 to-purple-500/15 rounded-3xl blur-xl opacity-0 group-hover:opacity-60 transition-all duration-500"></div>
                             </div>
                         </motion.div>
                     ))}

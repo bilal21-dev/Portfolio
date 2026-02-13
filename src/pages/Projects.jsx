@@ -256,7 +256,7 @@ export default function Projects() {
 
   return (
     <motion.section
-      className="w-full min-h-screen bg-gradient-to-br from-black via-gray-900 to-slate-900 flex flex-col justify-center items-center relative overflow-x-hidden overflow-y-auto"
+      className="w-full min-h-screen bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-slate-900 via-gray-900 to-black flex flex-col justify-center items-center relative overflow-x-hidden overflow-y-auto"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -299,48 +299,46 @@ export default function Projects() {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 mt-4 sm:mt-8 pb-22 lg:mt-12 pt-20 sm:pt-0 overflow-x-hidden">
         {/* Page Title */}
         <motion.div
-          className="text-center mb-8 sm:mb-12 lg:mb-16"
+          className="text-center mb-10 sm:mb-14 lg:mb-16"
           variants={itemVariants}
         >
           <motion.h1
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent mb-4"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-violet-200 to-indigo-300 bg-clip-text text-transparent mb-5 tracking-tight"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.2 }}
           >
             My Projects
           </motion.h1>
 
-          <p className="text-white/70 text-lg sm:text-xl max-w-2xl mx-auto mb-8">
+          <p className="text-white/60 text-lg sm:text-xl max-w-2xl mx-auto mb-10 font-light">
             A showcase of my development work and technical achievements
           </p>
 
           {/* Section Toggle Buttons */}
           <motion.div
-            className="flex justify-center gap-4 mb-8"
+            className="flex justify-center gap-4 sm:gap-5"
             variants={itemVariants}
           >
             <motion.button
               onClick={() => setActiveSection("development")}
-              className={`w-48 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                activeSection === "development"
-                  ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/25"
-                  : "bg-white/10 text-white/70 hover:bg-white/20 border border-white/20"
+              className={`w-44 sm:w-52 px-5 py-3 sm:py-3.5 rounded-2xl font-semibold text-sm sm:text-base transition-all duration-300 ${activeSection === "development"
+                  ? "bg-gradient-to-r from-indigo-500 to-violet-500 text-white shadow-xl shadow-indigo-500/30 border border-indigo-400/50"
+                  : "bg-white/5 text-white/70 hover:bg-white/10 border border-white/10 hover:border-white/20 backdrop-blur-sm"
               }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.03, y: -2 }}
+              whileTap={{ scale: 0.97 }}
             >
               Web Development
             </motion.button>
 
             <motion.button
               onClick={() => setActiveSection("ai")}
-              className={`w-48 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                activeSection === "ai"
-                  ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/25"
-                  : "bg-white/10 text-white/70 hover:bg-white/20 border border-white/20"
+              className={`w-44 sm:w-52 px-5 py-3 sm:py-3.5 rounded-2xl font-semibold text-sm sm:text-base transition-all duration-300 ${activeSection === "ai"
+                  ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-xl shadow-emerald-500/30 border border-emerald-400/50"
+                  : "bg-white/5 text-white/70 hover:bg-white/10 border border-white/10 hover:border-white/20 backdrop-blur-sm"
               }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.03, y: -2 }}
+              whileTap={{ scale: 0.97 }}
             >
               AI/ML Projects
             </motion.button>

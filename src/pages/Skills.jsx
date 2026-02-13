@@ -132,7 +132,7 @@ export default function Skills() {
 
     return (
         <motion.section 
-            className="w-full min-h-screen bg-gradient-to-br from-black via-gray-900 to-slate-900 flex flex-col justify-center items-center relative overflow-x-hidden overflow-y-auto"
+            className="w-full min-h-screen bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-slate-900 via-gray-900 to-black flex flex-col justify-center items-center relative overflow-x-hidden overflow-y-auto"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
@@ -191,36 +191,36 @@ export default function Skills() {
             <div className="relative z-10 mt-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 overflow-x-hidden">
                 {/* Page Title */}
                 <motion.div 
-                    className="text-center mb-8"
+                    className="text-center mb-10"
                     variants={domainVariants}
                 >      
                     <motion.h1 
-                        className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent mb-4"
+                        className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-violet-200 to-indigo-300 bg-clip-text text-transparent mb-5 tracking-tight"
                         whileHover={{ scale: 1.02 }}
                         transition={{ duration: 0.2 }}
                     >
                         Skill Constellation
                     </motion.h1>
                     
-                    <p className="text-white/70 text-lg sm:text-xl max-w-2xl mx-auto">
+                    <p className="text-white/60 text-lg sm:text-xl max-w-2xl mx-auto font-light">
                         Explore my technical expertise across multiple domains
                     </p>
                 </motion.div>
 
                 {/* Skills Network Visualization */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-14">
                     {Object.entries(skillDomains).map(([key, domain], index) => (
                         <motion.div
                             key={key}
-                            className={`relative group cursor-pointer h-[240px]`}
+                            className={`relative group cursor-pointer h-[260px]`}
                             variants={domainVariants}
-                            whileHover={{ scale: 1.02 }}
+                            whileHover={{ scale: 1.02, y: -4 }}
                             onClick={() => openModal(key)}
                         >
                             {/* Domain Card */}
-                            <div className={`relative p-6 rounded-2xl border ${domain.borderColor} ${domain.bgColor} backdrop-blur-sm transition-all duration-500 group-hover:shadow-2xl h-full flex flex-col`}>
+                            <div className={`relative p-6 rounded-2xl border ${domain.borderColor} ${domain.bgColor} backdrop-blur-xl transition-all duration-500 group-hover:shadow-2xl h-full flex flex-col shadow-xl shadow-black/30`}>
                                 {/* Glow Effect */}
-                                <div className={`absolute -inset-0.5 bg-gradient-to-r ${domain.color} rounded-2xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-500`}></div>
+                                <div className={`absolute -inset-0.5 bg-gradient-to-r ${domain.color} rounded-2xl blur opacity-15 group-hover:opacity-35 transition-all duration-500`}></div>
                                 
                                 <div className="relative z-10 flex flex-col h-full">
                                     {/* Domain Header */}
@@ -241,21 +241,21 @@ export default function Skills() {
                                     </div>
 
                                     {/* Skills Preview */}
-                                    <div className="flex flex-wrap gap-2 mb-4 flex-grow min-h-[80px] content-start">
+                                    <div className="flex flex-wrap gap-2.5 mb-4 flex-grow min-h-[80px] content-start">
                                         {domain.skills.slice(0, 4).map((skill, idx) => (
                                             <motion.div
                                                 key={skill.name}
-                                                className="flex items-center space-x-2 px-3 py-1 bg-white/10 rounded-full text-sm whitespace-nowrap"
+                                                className="flex items-center space-x-2 px-3.5 py-1.5 bg-white/10 backdrop-blur-sm rounded-full text-sm whitespace-nowrap border border-white/5 hover:border-white/20 transition-all duration-300"
                                                 initial={{ opacity: 0, x: -20 }}
                                                 animate={{ opacity: 1, x: 0 }}
                                                 transition={{ delay: index * 0.1 + idx * 0.05 }}
                                             >
                                                 <img src={skill.icon} alt={skill.name} className="w-4 h-4 flex-shrink-0" />
-                                                <span className="text-white/80 truncate max-w-[100px]">{skill.name}</span>
+                                                <span className="text-white/75 truncate max-w-[100px] font-medium">{skill.name}</span>
                                             </motion.div>
                                         ))}
                                         {domain.skills.length > 4 && (
-                                            <div className="px-3 py-1 bg-white/5 rounded-full text-sm text-white/60 whitespace-nowrap">
+                                            <div className="px-3.5 py-1.5 bg-white/5 rounded-full text-sm text-white/50 whitespace-nowrap border border-white/5 font-medium">
                                                 +{domain.skills.length - 4} more
                                             </div>
                                         )}
@@ -274,12 +274,12 @@ export default function Skills() {
 
                 {/* Interactive Skill Network Map */}
                 <motion.div
-                    className="relative mt-12 p-8 mb-28 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm sm:mb-22 "
+                    className="relative mt-14 p-8 mb-32 rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] backdrop-blur-xl sm:mb-24 shadow-2xl shadow-black/40"
                     variants={domainVariants}
                 >
-                    <h3 className="text-2xl font-bold text-white mb-6 text-center flex items-center justify-center">
-                        <Sparkles className="w-6 h-6 mr-2" />
-                        Technology Synergy Map
+                    <h3 className="text-2xl font-bold text-white mb-8 text-center flex items-center justify-center tracking-tight">
+                        <Sparkles className="w-6 h-6 mr-2 text-violet-400" />
+                        <span className="bg-gradient-to-r from-white via-violet-200 to-indigo-300 bg-clip-text text-transparent">Technology Synergy Map</span>
                     </h3>
                     
                     <div className="relative h-64 overflow-hidden rounded-xl">
