@@ -22,7 +22,7 @@ export default function ResumeButton() {
             animate="visible"
         >
             <motion.a 
-                href="https://1drv.ms/b/c/164588017e55b3d9/EY_6lQuFVmBHuHXzDIVMEi8Bl5EH2jaT3Kw2Jd507fTD7w?e=eWgk7a" 
+                href="https://1drv.ms/b/c/164588017e55b3d9/IQDe4gKWJXYeSITPA1krJd6KAUcrQAs59Zfckj6ta53M7b0?e=TflH7D" 
                 target="_blank" 
                 className="relative group flex items-center gap-1.5 sm:gap-2 px-2 py-1.5 sm:px-3 sm:py-2 backdrop-blur-xl bg-white/10 border border-white/20 text-white rounded-2xl hover:bg-white/20 transition-all duration-300 overflow-hidden hover:shadow-blue-500/20"
                 whileHover={{ scale: 1.05 }}
