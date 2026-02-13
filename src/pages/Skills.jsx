@@ -132,7 +132,7 @@ export default function Skills() {
 
     return (
         <motion.section 
-            className="w-screen min-h-screen bg-gradient-to-br from-black via-gray-900 to-slate-900 flex flex-col justify-center items-center relative overflow-hidden"
+            className="w-full min-h-screen bg-gradient-to-br from-black via-gray-900 to-slate-900 flex flex-col justify-center items-center relative overflow-x-hidden overflow-y-auto"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
@@ -158,7 +158,7 @@ export default function Skills() {
                 />
                 
                 {/* Floating Connection Lines */}
-                <svg className="absolute inset-0 w-full h-full">
+                <svg className="absolute inset-0 w-full h-full overflow-hidden">
                     <defs>
                         <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                             <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.3" />
@@ -188,7 +188,7 @@ export default function Skills() {
             </div>
 
             {/* Main Content */}
-            <div className="relative z-10 mt-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div className="relative z-10 mt-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 overflow-x-hidden">
                 {/* Page Title */}
                 <motion.div 
                     className="text-center mb-8"

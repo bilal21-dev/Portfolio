@@ -64,7 +64,7 @@ export default function Profile() {
 
     return (
         <motion.section
-            className="w-screen min-h-screen bg-gradient-to-br from-black via-gray-900 to-slate-900 flex flex-col justify-center items-center relative overflow-hidden"
+            className="w-full min-h-screen bg-gradient-to-br from-black via-gray-900 to-slate-900 flex flex-col justify-center items-center relative overflow-x-hidden overflow-y-auto"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
@@ -104,7 +104,7 @@ export default function Profile() {
             </div>
 
             {/* Main Content */}
-            <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 pb-40 lg:px-8 py-8 sm:py-12 lg:py-16  sm:pb-32 mt-8 lg:pb-36">
+            <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 pb-40 lg:px-8 py-8 sm:py-12 lg:py-16  sm:pb-32 mt-8 lg:pb-36 overflow-x-hidden">
                 {/* Page Title */}
                 <motion.div
                     className="text-center mb-8 sm:mb-12 lg:mb-16"
